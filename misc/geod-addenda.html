@@ -106,8 +106,10 @@ C_{45} &\textstyle=  \frac{128}{99099} \epsilon^5 + \ldots.
         range.  The geodesic classes offer this option through the
         Geodesic::LONG_UNROLL mask bit.  In the case of the inverse
         problem, we are interested in the shortest geodesic and thus
-        \(\lambda_{12}\in(-\pi,\pi]\) (the geodesic between points on
-        opposite meridians is taken to be east-going).  When solving the
+        \(\lambda_{12}\in[-\pi,\pi]\) (the geodesic between points on
+        opposite meridians is taken to be east- or west-going depending
+        on whether \(\lambda_2 - \lambda_1\) is positive or negative).
+        When solving the
         direct geodesic problem, \(\sigma_{12}\) is found in terms of
         the length of the geodesic, \(\omega\) and \(\sigma\) pass from
         one quadrant to the next at the same time, and they are related
@@ -155,7 +157,7 @@ C_{45} &\textstyle=  \frac{128}{99099} \epsilon^5 + \ldots.
 \textstyle
 A_2 = (1 + \epsilon)^{-1} \bigl(
 1 - \frac{3}{4}\epsilon^2 - \frac{7}{64}\epsilon^4
-- \frac{11}{256}\epsilon^6 - \frac{375}{16384}\epsilon^8 + \ldots
+- \frac{11}{256}\epsilon^6 + \ldots
 \bigr).
         \]
       <li>
@@ -475,7 +477,7 @@ A_2 = (1 + \epsilon)^{-1} \bigl(
     <hr>
     <address>Charles Karney
       <a href="mailto:charles@karney.com">&lt;charles@karney.com&gt;</a>
-      (2019-09-16)</address>
+      (2022-04-09)</address>
     <br>
     <a href="https://geographiclib.sourceforge.io">
       GeographicLib home

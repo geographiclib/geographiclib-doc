@@ -1,23 +1,28 @@
+set (SOURCES
+  index.html
+  LICENSE.txt
+  robots.txt
+  google16ac598d95b3d4df.html
+  default.css
+  geod.html
+  tm.html
+  geod-addenda.html
+  bessel-errata.html
+  jacobi-errata.html
+  tm-addenda.html
+  tm-figs.pdf
+  tm-grid.kmz)
+
 if (RSYNC)
   set (USER karney)
-  set (DOCTOP $ENV{HOME}/web/geographiclib-web/htdocs)
-  set (DOCROOT ${DOCTOP}/misc)
+  set (DOCROOT $ENV{HOME}/web/geographiclib-web/htdocs)
   set (WEBDEPLOY ${USER},geographiclib@web.sourceforge.net:./htdocs)
 
   add_custom_target (stage-misc
-    COMMAND
-      ${RSYNC} -av robots.txt google*.html index.html default.css ${DOCTOP}/
-    COMMAND ${RSYNC} -av
-      --exclude '.git*' --exclude '*~' --exclude '*.txt'
-      --exclude 'google*.html' --exclude 'index.html' --exclude '*.png'
-      --delete --delete-excluded . ${DOCROOT}/
+    COMMAND ${RSYNC} -av ${SOURCES} ${DOCROOT}/
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
-
-  add_custom_target (deploy-misc
-    COMMAND
-      ${RSYNC} --delete -av --exclude '*~' -e ssh ${DOCROOT} ${WEBDEPLOY}/ )
 
   add_custom_target (deploy-html
     COMMAND
-      ${RSYNC} --delete -av --exclude '*~' -e ssh ${DOCTOP}/ ${WEBDEPLOY}/ )
+      ${RSYNC} --delete -av --exclude '*~' -e ssh ${DOCROOT}/ ${WEBDEPLOY}/ )
 endif ()

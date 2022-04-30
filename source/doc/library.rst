@@ -67,7 +67,7 @@ JavaScript\ [#k]_ `JS doc`_       `JS repo`_         `JS packages`_\ [#l]_
         <https://www.mathworks.com/matlabcentral/fileexchange/50605>`_.
 .. [#i] Also includes the gnomonic projections.
 .. [#j] Also available as a `Maven Central package
-        <https://repo1.maven.org/maven2/net/sf/geographiclib/GeographicLib-Java/>`_
+        <https://search.maven.org/artifact/net.sf.geographiclib/GeographicLib-Java>`_
 .. [#k] Also includes the routines for decoding and encoding DMS strings.
 .. [#l] Also available as an `npm package
         <https://www.npmjs.com/package/geographiclib>`_
@@ -93,7 +93,7 @@ JavaScript\ [#k]_ `JS doc`_       `JS repo`_         `JS packages`_\ [#l]_
    https://sourceforge.net/projects/geographiclib/files/distrib-Python
 
 .. _Octave doc:
-   https://github.com/geographiclib/geographiclib-octave/blob/main/inst/Contents.m.in
+   https://github.com/geographiclib/geographiclib-octave#readme
 .. _Octave repo: https://github.com/geographiclib/geographiclib-octave
 .. _Octave packages:
    https://sourceforge.net/projects/geographiclib/files/distrib-Octave
