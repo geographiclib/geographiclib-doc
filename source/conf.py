@@ -17,7 +17,7 @@
 # -- Project information -----------------------------------------------------
 
 # The master toctree document.
-root_doc = 'nindex'
+root_doc = 'index'
 
 project = 'GeographicLib'
 copyright = '2009–2022, Charles Karney'

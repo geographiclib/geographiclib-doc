@@ -15,7 +15,7 @@ The repositories for all implementations are on `GitHub
 <https://github.com/orgs/geographiclib/repositories>`_.  The project is
 hosted on `SourceForge
 <https://sourceforge.net/projects/geographiclib>`_ and it hosts
-GeographicLib's `web page <https://geographiclib.sourceforge.io>`_ and
+GeographicLib's `web pages <https://geographiclib.sourceforge.io>`_ and
 the `file system
 <https://sourceforge.net/projects/geographiclib/files>`_ for package
 distribution.
@@ -135,7 +135,7 @@ Datasets
 --------
 
 Some classes in the C++ library and the geoid functions in the Octave
-package require dataset to be available.  Here are the links for the
+package require datasets to be available.  Here are the links for the
 instructions for how to download and install these.
 
 =============== ================= ========================
@@ -159,8 +159,8 @@ magnetic models `magnetic data`_  `magnetic instructions`_
 .. _magnetic instructions:
    ../C++/doc/magnetic.html#magneticinst
 
-Testdata
---------
+Test data
+---------
 
 High quality test data is used to test GeographicLib for
 
@@ -172,7 +172,27 @@ High quality test data is used to test GeographicLib for
 Other implementations
 ---------------------
 
-Others have ports to other language, build libraries and tools based on
-GeographicLib:
+Others have written independent implementations of the geodesic
+algorithms or have built other tools using GeographicLib:
 
-* `a graphical tool for geodesic calculations <http://geo.javawa.nl/coordcalc/index_en.html>`_
+* *Mathematica*: Kei Misawa, `mathematica-geodesic
+  <https://github.com/330k/mathematica-geodesic>`_.
+
+* *R*: R. J. Hijmans, `geosphere
+  <https://cran.r-project.org/package=geosphere>`_.
+
+* *Rust*: Michael Kirk, `Rust implementation of GeographicLib
+  <https://github.com/georust/geographiclib-rs>`_.
+
+* *Go*: Patrick Yukman, `A Go port of GeographicLib
+  <https://github.com/pymaxion/geographiclib-go>`_.
+
+* *Python via Cython*: Sergey Serebryakov, `Cython extension module for
+  GeographicLib
+  <https://github.com/megaserg/geographiclib-cython-bindings>`_.
+
+* *JavaScript via emscripten*: William Wall, `OpenSphere ASM
+  <https://github.com/ngageoint/opensphere-asm>`_.
+
+* *JavaScript*: Jaco, `a graphical tool for geodesic calculations
+  <http://geo.javawa.nl/coordcalc/index_en.html>`_.

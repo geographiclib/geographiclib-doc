@@ -1,7 +1,8 @@
 set (SOURCEDIR "${CMAKE_CURRENT_SOURCE_DIR}")
-file (GLOB DOCSOURCES
-  ${SOURCEDIR}/*.rst
-  ${SOURCEDIR}/doc/*.rst)
+set (DOCSOURCES
+  ${SOURCEDIR}/index.rst
+  ${SOURCEDIR}/doc/library.rst
+  ${SOURCEDIR}/doc/research.rst)
 
 add_custom_target (doc ALL
   DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/html/nindex.html)
@@ -18,7 +19,7 @@ if (RSYNC)
   set (SPHINX_OUTPUT
     doc
     genindex.html
-    nindex.html
+    index.html
     objects.inv
     search.html
     searchindex.js

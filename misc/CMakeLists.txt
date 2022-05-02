@@ -1,5 +1,5 @@
 set (SOURCES
-  index.html
+  oindex.html
   LICENSE.txt
   robots.txt
   google16ac598d95b3d4df.html
