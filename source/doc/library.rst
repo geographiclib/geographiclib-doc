@@ -15,13 +15,15 @@ The repositories for all implementations are on `GitHub
 <https://github.com/orgs/geographiclib/repositories>`_.  The project is
 hosted on `SourceForge
 <https://sourceforge.net/projects/geographiclib>`_ and it hosts
-GeographicLib's `web pages <https://geographiclib.sourceforge.io>`_ and
+GeographicLib's `web pages <../index.html>`_ and
 the `file system
 <https://sourceforge.net/projects/geographiclib/files>`_ for package
 distribution.
 
-Languages
----------
+.. _languages:
+
+Supported languages
+-------------------
 
 The C++ version of GeographicLib offers the broadest range of features.
 However, the geodesic routines are available several other languages.

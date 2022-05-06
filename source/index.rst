@@ -6,28 +6,31 @@
 GeographicLib
 =============
 
-`GeographicLib <C++/doc/index.html>`_ is a small set of C++ classes for
+**GeographicLib** is collection of libraries descended from an original
+C++ library by `Charles Karney <mailto:charles@karney.com>`_ which
+started in 2008.  That `C++ library <C++/doc/index.html>`_ now offers:
 
-* geodesic and rhumb line calculations,
+* geodesic and rhumb line calculations;
 
 * conversions between geographic, UTM, UPS, MGRS, geocentric, and local
-  cartesian coordinates,
+  cartesian coordinates;
 
 * gravity (e.g., EGM2008) and geomagnetic field (e.g., WMM2020)
   calculations.
 
-Here is the:
-
-* `library documentation <C++/doc/index.html>`_,
-* `main project page <https://sourceforge.net/projects/geographiclib/>`_,
-* `git repository <https://github.com/geographiclib/geographiclib>`_,
-* `license for the library (MIT) <LICENSE.txt>`_,
-* `old home page <oindex.html>`_.
-
 Portions of the library (particularly the geodesic routines) have also
-been implemented in other languages.  Prior to version 2.0, all the
-implementations were bundled together in the same repository.  Now they
-have been separated into separate repositories.
+been implemented in a few :ref:`other languages <languages>`.  Prior to
+version 2.0, all the implementations were bundled together in the same
+repository.  Now they have been separated into a family of repositories
+on `github <https://github.com/geographiclib>`_.
+
+Links
+-----
+
+* `MIT license <LICENSE.txt>`_
+* `old home page <oindex.html>`_ for GeographicLib
+* `SourceForge project page <https://sourceforge.net/projects/geographiclib>`_
+  for GeographicLib
 
 .. toctree::
    :maxdepth: 2
