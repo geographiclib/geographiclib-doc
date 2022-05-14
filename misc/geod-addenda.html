@@ -10,8 +10,8 @@
     <meta name="author" content="Charles F. F. Karney" />
     <link rel="stylesheet" type="text/css" href="default.css">
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <script type="text/javascript" async
-            src="https://geographiclib.sourceforge.io/MathJax-2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
   </head>
   <body topmargin=10 leftmargin=10>
@@ -28,10 +28,9 @@
     <ol>
       <li>
         Implementations of the geodesic routines are now available in C,
-        Fortran, Java, JavaScript, Python, and Matlab (in addition to
+        Fortran, Java, JavaScript, Python, and Octave/MATLAB (in addition to
         C++).  For details see
-        <a href="https://geographiclib.sourceforge.io/C++/doc/other.html">
-          this link</a>.
+        <a href="doc/library.html#languages">this link</a>.
       <li>
         Care needs to be taken when solving the inverse problem for a
         non-equatorial geodesic when both end points on the equator.  In
@@ -199,7 +198,7 @@ A_2 = (1 + \epsilon)^{-1} \bigl(
             <a href="https://books.google.com/books?id=a1wTJR3kHwUC">
               a1wTJR3kHwUC</a>,
             pdf:
-            <a href="https://geographiclib.sourceforge.io/geodesic-papers/gauss28-en.pdf">
+            <a href="geodesic-papers/gauss28-en.pdf">
               gauss28-en.pdf</a>.
           <li>
             Helmert (1880),
@@ -207,7 +206,7 @@ A_2 = (1 + \epsilon)^{-1} \bigl(
             <a href="https://books.google.com/books?id=qt2CAAAAIAAJ">
               qt2CAAAAIAAJ</a>,
             pdf:
-            <a href="https://geographiclib.sourceforge.io/geodesic-papers/helmert80.pdf">
+            <a href="geodesic-papers/helmert80.pdf">
               helmert80.pdf</a>.
           <li>
             Jacobi (1891),
@@ -215,37 +214,37 @@ A_2 = (1 + \epsilon)^{-1} \bigl(
             <a href="https://books.google.com/books?id=_09tAAAAMAAJ">
               _09tAAAAMAAJ</a>,
             pdf:
-            <a href="https://geographiclib.sourceforge.io/geodesic-papers/jacobi-V7.pdf">
+            <a href="geodesic-papers/jacobi-V7.pdf">
               jacobi-V7.pdf</a>.
         </ul>
     </ol>
     Items 3&ndash;8 represent changes since the publication of the
     paper.  Changes 3&ndash;7 have been implemented in the
-    <a href="../index.html"> GeographicLib</a> classes
-    <a href="../C++/doc/classGeographicLib_1_1Geodesic.html"> Geodesic</a> and
-    <a href="../C++/doc/classGeographicLib_1_1GeodesicLine.html">
+    <a href="index.html"> GeographicLib</a> classes
+    <a href="C++/doc/classGeographicLib_1_1Geodesic.html"> Geodesic</a> and
+    <a href="C++/doc/classGeographicLib_1_1GeodesicLine.html">
       GeodesicLine</a>
     in GeographicLib versions 1.27, 1.26, 1.39 (fixed in 1.43), 1.25,
     and 1.44, respectively.  Change 8 (the evaluation of the integrals
     in terms of elliptic integrals) is implemented in
-    the <a href="../index.html">
+    the <a href="index.html">
       GeographicLib</a>
     classes
-    <a href="../C++/doc/classGeographicLib_1_1GeodesicExact.html">
+    <a href="C++/doc/classGeographicLib_1_1GeodesicExact.html">
       GeodesicExact</a> and
-    <a href="../C++/doc/classGeographicLib_1_1GeodesicLineExact.html">
+    <a href="C++/doc/classGeographicLib_1_1GeodesicLineExact.html">
       GeodesicLineExact</a> which were added to GeographicLib 1.25.
     For geodetic applications,
-    <a href="../C++/doc/classGeographicLib_1_1Geodesic.html">
+    <a href="C++/doc/classGeographicLib_1_1Geodesic.html">
       Geodesic</a> and
-    <a href="../C++/doc/classGeographicLib_1_1GeodesicLine.html">
+    <a href="C++/doc/classGeographicLib_1_1GeodesicLine.html">
       GeodesicLine</a>
     are preferred, because they are about 2&ndash;3 times faster and the
 
     round-off errors are about 2&ndash;3 times smaller.
     <p>
       Some notes on geodesics on a <i>triaxial</i> ellipsoid are given
-      in <a href="../C++/doc/triaxial.html"> Geodesics on a triaxial
+      in <a href="C++/doc/triaxial.html"> Geodesics on a triaxial
       ellipsoid</a>.  This examines the solution to this problem found
       by Jacobi in 1839.
     <h3>
@@ -303,7 +302,7 @@ A_2 = (1 + \epsilon)^{-1} \bigl(
               <a href="https://books.google.com/books?id=9W9tAAAAMAAJ">
                 9W9tAAAAMAAJ</a>,
               pdf:
-              <a href="https://geographiclib.sourceforge.io/geodesic-papers/christoffel-V1.pdf">
+              <a href="geodesic-papers/christoffel-V1.pdf">
                 christoffel-V1.pdf</a>.
             <li>
               Darboux (1894),
@@ -311,7 +310,7 @@ A_2 = (1 + \epsilon)^{-1} \bigl(
               <a href="https://books.google.com/books?id=hGMSAAAAIAAJ">
                 hGMSAAAAIAAJ</a>,
               pdf:
-              <a href="https://geographiclib.sourceforge.io/geodesic-papers/darboux94.pdf">
+              <a href="geodesic-papers/darboux94.pdf">
                 darboux94.pdf</a>.
             <li>
               Eisenhart (1909),
@@ -319,7 +318,7 @@ A_2 = (1 + \epsilon)^{-1} \bigl(
               <a href="https://books.google.com/books?id=hkENAAAAYAAJ">
                 hkENAAAAYAAJ</a>,
               pdf:
-              <a href="https://geographiclib.sourceforge.io/geodesic-papers/eisenhart09.pdf">
+              <a href="geodesic-papers/eisenhart09.pdf">
                 eisenhart09.pdf</a>.
             <li>
               Forsyth (1896),
@@ -327,7 +326,7 @@ A_2 = (1 + \epsilon)^{-1} \bigl(
               <a href="https://books.google.com/books?id=YsAKAAAAIAAJ">
                 YsAKAAAAIAAJ</a>,
               pdf:
-              <a href="https://geographiclib.sourceforge.io/geodesic-papers/messmath-V25.pdf">
+              <a href="geodesic-papers/messmath-V25.pdf">
                 messmath-V25.pdf</a>.
             <li>
               Gauss (1902),
@@ -335,7 +334,7 @@ A_2 = (1 + \epsilon)^{-1} \bigl(
               <a href="https://books.google.com/books?id=a1wTJR3kHwUC">
                 a1wTJR3kHwUC</a>,
               pdf:
-              <a href="https://geographiclib.sourceforge.io/geodesic-papers/gauss28-en.pdf">
+              <a href="geodesic-papers/gauss28-en.pdf">
                 gauss28-en.pdf</a>.
             <li>
               Gauss (1903),
@@ -343,7 +342,7 @@ A_2 = (1 + \epsilon)^{-1} \bigl(
               <a href="https://books.google.com/books?id=ICwPAAAAIAAJ">
                 ICwPAAAAIAAJ</a>,
               pdf:
-              <a href="https://geographiclib.sourceforge.io/geodesic-papers/gauss-V9.pdf">
+              <a href="geodesic-papers/gauss-V9.pdf">
                 gauss-V9.pdf</a>.
             <li>
               Helmert (1880),
@@ -351,7 +350,7 @@ A_2 = (1 + \epsilon)^{-1} \bigl(
               <a href="https://books.google.com/books?id=qt2CAAAAIAAJ">
                 qt2CAAAAIAAJ</a>,
               pdf:
-              <a href="https://geographiclib.sourceforge.io/geodesic-papers/helmert80.pdf">
+              <a href="geodesic-papers/helmert80.pdf">
                 helmert80.pdf</a>.
             <li>
               Jacobi (1891),
@@ -359,7 +358,7 @@ A_2 = (1 + \epsilon)^{-1} \bigl(
               <a href="https://books.google.com/books?id=_09tAAAAMAAJ">
                 _09tAAAAMAAJ</a>,
               pdf:
-              <a href="https://geographiclib.sourceforge.io/geodesic-papers/jacobi-V7.pdf">
+              <a href="geodesic-papers/jacobi-V7.pdf">
                 jacobi-V7.pdf</a>.
           </ul>
       </ul>

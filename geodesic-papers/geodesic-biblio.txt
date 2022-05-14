@@ -1761,6 +1761,12 @@
    J. Geodetic Science '''7'''(1), 31--42 (2017).[[BR]]
    https://doi.org/10.1515/jogs-2017-0004 [[BR]]
    https://arxiv.org/abs/1612.01357
+ * G. Panou and R. Korakitis,[[BR]]
+   ''Geodesic equations and their numerical solution in Cartesian
+   coordinates on a triaxial ellipsoid'',
+   J. Geodetic Science '''9'''(1), 1--12 (2019).[[BR]]
+   https://doi.org/10.1515/jogs-2019-0001 [[BR]]
+   https://arxiv.org/abs/1811.03513
  * W.-K. Tseng,[[BR]]
    ''An algorithm for the inverse solution of geodesic sailing without
    auxiliary sphere'',

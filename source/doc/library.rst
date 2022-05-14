@@ -48,17 +48,17 @@ JavaScript\ [#k]_ `JS doc`_       `JS repo`_         `JS packages`_\ [#l]_
         from other downstream providers.  Prior to version 2.0, all the
         languages were bundled into a single source package available
         `here
-        <https://sourceforge.net/projects/geographiclib/files/distrib>`_
+        <https://sourceforge.net/projects/geographiclib/files/distrib>`_.
 .. [#c] This repository also hold the implementations in other languages
         for versions before 2.0.
 .. [#d] Also available in several Linux distributions (Debian, Ubuntu,
         Fedora, etc.) and as packages on `conda-forge (C++)
         <https://anaconda.org/conda-forge/geographiclib-cpp>`_,
         `vcpkg <https://vcpkg.info/port/geographiclib>`_, and
-        `brew <https://formulae.brew.sh/formula/geographiclib>`_
+        `brew <https://formulae.brew.sh/formula/geographiclib>`_.
 .. [#e] The C library is incorporated into `PROJ
         <https://proj.org/geodesic.html>`_ and the R package `geosphere
-        <https://cran.r-project.org/package=geosphere>`_
+        <https://cran.r-project.org/package=geosphere>`_.
 .. [#f] Also available as a `PyPI package
         <https://pypi.python.org/pypi/geographiclib>`_ and in
         `conda-forge (Python) <https://anaconda.org/conda-forge/geographiclib>`_
@@ -70,9 +70,13 @@ JavaScript\ [#k]_ `JS doc`_       `JS repo`_         `JS packages`_\ [#l]_
 .. [#i] Also includes the gnomonic projections.
 .. [#j] Also available as a `Maven Central package
         <https://search.maven.org/artifact/net.sf.geographiclib/GeographicLib-Java>`_
-.. [#k] Also includes the routines for decoding and encoding DMS strings.
-.. [#l] Also available as an `npm package
-        <https://www.npmjs.com/package/geographiclib>`_
+.. [#k] Consists of 2 packages ``geographiclib-geodesic`` and
+        ``geographiclib-dms`` for handling geodesic calculations and DMS
+        strings, respectively.
+.. [#l] Also available as npm packages `geographiclib-geodesic
+        <https://www.npmjs.com/package/geographiclib-geodesic>`_ and
+        `geographiclib-dms
+        <https://www.npmjs.com/package/geographiclib-dms>`_.
 
 .. _C++ doc:  ../C++/doc/index.html
 .. _C++ repo: https://github.com/geographiclib/geographiclib
