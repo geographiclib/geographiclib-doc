@@ -27,10 +27,12 @@ on `github <https://github.com/geographiclib>`_.
 Links
 -----
 
-* `MIT license <LICENSE.txt>`_
-* `old home page <oindex.html>`_ for GeographicLib
+* `C++ library documentation <C++/doc/index.html>`_
 * `SourceForge project page <https://sourceforge.net/projects/geographiclib>`_
   for GeographicLib
+* `Implementations in other languages <doc/library.html#languages>`_
+* `MIT license <LICENSE.txt>`_
+* `old home page <oindex.html>`_ for GeographicLib
 
 .. toctree::
    :maxdepth: 2

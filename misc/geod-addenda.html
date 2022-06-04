@@ -188,6 +188,59 @@ A_2 = (1 + \epsilon)^{-1} \bigl(
         (see <a href="https://dlmf.nist.gov/19.2.ii">
         https://dlmf.nist.gov/19.2.ii</a>).
       <li>
+        The integral \(I_4(\sigma)\), Eq. (61), appearing in the
+        expression for the area Eq. (59), does not appear to be an
+        elliptic integral.  When the formulation of geodesics in
+        terms elliptic integrals was first provided in GeographicLib, a
+        30th order series for \(I_4(\sigma)\) was used, expanded in
+        terms of \(n\) and \(\epsilon\) as in item 4 above.  This
+        provided full accuracy in double precision for \(\frac12 \le b/a
+        \le 2\).  Here we detail how to obtain accuracy over a wider
+        range.  We start by writing Eq. (61) as
+\[
+\begin{align}
+I_4 &= \int_{\pi/2}^\sigma q(\sigma')\,d\sigma',\\
+q(\sigma) &= - \Delta t(e'^2, k^2\sin^2\sigma) \frac{\sin\sigma}2,\\
+\Delta t(x,y) &= \frac{t(x)-t(y)}{x-y},\\
+t(x>0) &= x +
+\biggl( \sqrt{1 + x} \frac{\sinh^{-1}\sqrt x}{\sqrt x} - 1 \biggr),\\
+t(x<0) &= x +
+\biggl( \sqrt{1 + x} \frac{\sin^{-1}\sqrt{-x}}{\sqrt{-x}} - 1 \biggr),\\
+t(0) &=0.\\
+\end{align}
+\]
+        The notation \(\Delta t(x,y)\) is used for the <i>divided
+        difference</i> of \(t(x)\) and, because \(t(x)\) involves just
+        elementary functions, there's a systematic way to put it in a
+        form that avoids subtracting nearly equal quantities as
+        explained by <a href="https://doi.org/10.1145/334714.334716">
+        Kahan and Fateman (1999)</a>.  From the symmetries of the sine
+        function, it's clear that we can expand \(q(\sigma)\) in a
+        Fourier series
+\[
+q(\sigma) = \sum_{l=0}^\infty Q_l \sin\bigl((2l+1)\sigma\bigr),
+\]
+        so that we have
+\[
+\begin{align}
+I_4(\sigma)&= \sum_{l=0}^\infty C_{4l} \cos\bigl((2l+1)\sigma\bigr),\\
+C_{4l} &= -\frac{Q_l}{2l+1};\\
+\end{align}
+\]
+        this is Eq. (62) in the paper.  Instead of determining \(Q_l\)
+        using a Taylor expansion (as in the paper and in item 4), we use
+        the discrete sine transform and compute
+\[
+Q_l = \frac2N \sum_{j=1}^{N} p_j q(\sigma_j)  \sin\bigl((2l+1)\sigma_j\bigr)
+\]
+        for \(0\le l\lt N\), where \(\sigma_j = j\pi/(2N)\) and \(p_j =
+        \frac12\) for \(j = N\) and \(1\) otherwise.  Using the fast
+        Fourier transform, \(Q_l\) may be computed efficiently.  In
+        addition, this yields a good approximation to the true values of
+        \(Q_l\): the number of correct digits approximately doubles as
+        \(N\) is doubled.  \(N\) is adjusted to give full accuracy for
+        \(0.01 \le b/a \le 100\).
+      <li>
         Google Books does not consistently provide access to the full
         text.  If you encounter this situation, you can download the
         pdf files listed here:
@@ -218,7 +271,7 @@ A_2 = (1 + \epsilon)^{-1} \bigl(
               jacobi-V7.pdf</a>.
         </ul>
     </ol>
-    Items 3&ndash;8 represent changes since the publication of the
+    Items 3&ndash;9 represent changes since the publication of the
     paper.  Changes 3&ndash;7 have been implemented in the
     <a href="index.html"> GeographicLib</a> classes
     <a href="C++/doc/classGeographicLib_1_1Geodesic.html"> Geodesic</a> and
@@ -234,13 +287,13 @@ A_2 = (1 + \epsilon)^{-1} \bigl(
       GeodesicExact</a> and
     <a href="C++/doc/classGeographicLib_1_1GeodesicLineExact.html">
       GeodesicLineExact</a> which were added to GeographicLib 1.25.
-    For geodetic applications,
+    Change 9 (the accurate computation of geodesic areas) was added to
+    these classes in GeographicLib 2.1.  For geodetic applications,
     <a href="C++/doc/classGeographicLib_1_1Geodesic.html">
       Geodesic</a> and
     <a href="C++/doc/classGeographicLib_1_1GeodesicLine.html">
       GeodesicLine</a>
     are preferred, because they are about 2&ndash;3 times faster and the
-
     round-off errors are about 2&ndash;3 times smaller.
     <p>
       Some notes on geodesics on a <i>triaxial</i> ellipsoid are given

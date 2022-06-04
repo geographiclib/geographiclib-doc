@@ -1782,8 +1782,13 @@
    Division. of Geodetic Science,
    Ohio State Univ. (2016), Chap. 2.[[BR]]
    https://hdl.handle.net/1811/77986
+ * C. Marx,[[BR]]
+   ''Performance of a solution of the direct geodetic
+   problem by Taylor series of Cartesian coordinates''.
+   J. Geodetic Science '''11'''(1), 122--130 (2021).[[BR]]
+   https://doi.org/10.1515/jogs-2020-0127 [[BR]]
  * E. Nowak and J. Nowak Da Costa,[[BR]]
    ''Theory, strict formula derivation and algorithm development for the
    computation of a geodesic polygon area'',
-   J. Geodesy '''96'''(4), 20:1--23 (2013).[[BR]]
+   J. Geodesy '''96'''(4), 20:1--23 (2022).[[BR]]
    https://doi.org/10.1007/s00190-022-01606-z

@@ -119,21 +119,21 @@ Online utilities
 
 The C++ library provides some online tools using GeographicLib
 
-* `geographic coordinate conversions <cgi-bin/GeoConvert>`_
+* `geographic coordinate conversions <../cgi-bin/GeoConvert>`_
   between latitude/longitude, UTM or UPS, and MGRS;
 
-* `direct and inverse geodesic calculations <cgi-bin/GeodSolve>`_;
+* `direct and inverse geodesic calculations <../cgi-bin/GeodSolve>`_;
 
-* `calculate the perimeter and area of geodesic polygons <cgi-bin/Planimeter>`_;
+* `calculate the perimeter and area of geodesic polygons <../cgi-bin/Planimeter>`_;
 
 * `various geodesic calculations using JavaScript <../scripts/geod-calc.html>`_;
 
 * `a tool for displaying geodesics on Google Maps
   <../scripts/geod-google.html>`_;
 
-* `rhumb line calculator <cgi-bin/RhumbSolve>`_;
+* `rhumb line calculator <../cgi-bin/RhumbSolve>`_;
 
-* `evaluate the geoid height <cgi-bin/GeoidEval>`_ for EGM84, EGM96, and
+* `evaluate the geoid height <../cgi-bin/GeoidEval>`_ for EGM84, EGM96, and
   EGM2008.
 
 
