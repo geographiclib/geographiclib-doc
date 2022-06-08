@@ -231,15 +231,20 @@ C_{4l} &= -\frac{Q_l}{2l+1};\\
         using a Taylor expansion (as in the paper and in item 4), we use
         the discrete sine transform and compute
 \[
-Q_l = \frac2N \sum_{j=1}^{N} p_j q(\sigma_j)  \sin\bigl((2l+1)\sigma_j\bigr)
+Q_l = \frac2N \sum_{j=0}^{N} p_j q(\sigma_j)  \sin\bigl((2l+1)\sigma_j\bigr)
 \]
         for \(0\le l\lt N\), where \(\sigma_j = j\pi/(2N)\) and \(p_j =
-        \frac12\) for \(j = N\) and \(1\) otherwise.  Using the fast
-        Fourier transform, \(Q_l\) may be computed efficiently.  In
-        addition, this yields a good approximation to the true values of
-        \(Q_l\): the number of correct digits approximately doubles as
-        \(N\) is doubled.  \(N\) is adjusted to give full accuracy for
-        \(0.01 \le b/a \le 100\).
+        \frac12\) for \(j = 0\) or \(j = N\) and \(1\) otherwise.  Using
+        the fast Fourier transform (FFT), \(Q_l\) may be computed
+        efficiently; using the FFT also minimizes round-off errors in
+        computing the sum.  In addition, this yields an excellent
+        approximation to the true value of \(Q_l\): the number of
+        correct digits approximately doubles as \(N\) is doubled.  This
+        is a consequence of the fact that the trapezium rule (or,
+        equivalently, the rectangle rule) converges faster than any
+        power of \(N\) when computing an integral over a full period of
+        a smooth periodic function.  \(N\) is adjusted to give full
+        accuracy for \(0.01 \le b/a \le 100\).
       <li>
         Google Books does not consistently provide access to the full
         text.  If you encounter this situation, you can download the
@@ -529,7 +534,7 @@ Q_l = \frac2N \sum_{j=1}^{N} p_j q(\sigma_j)  \sin\bigl((2l+1)\sigma_j\bigr)
     <hr>
     <address>Charles Karney
       <a href="mailto:charles@karney.com">&lt;charles@karney.com&gt;</a>
-      (2022-04-09)</address>
+      (2022-06-08)</address>
     <br>
     <a href="https://geographiclib.sourceforge.io">
       GeographicLib home
