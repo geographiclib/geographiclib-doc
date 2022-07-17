@@ -1777,6 +1777,22 @@
    https://doi.org/10.1017/S0373463314000228 [[BR]]
    https://doi.org/10.1017/S0373463314000745 [[BR]]
    https://doi.org/10.1017/S0373463314000733
+ * V. A. Botnev and S. M. Ustinov,[[BR]]
+   ''Methods for direct and inverse geodesic problems solving with high
+   precision'' (in Russian),
+   Comput. Telcomm. Control '''3'''(198), 49-58 (2014).[[BR]]
+   https://infocom.spbstu.ru/en/article/2014.39.5
+ * V. A. Botnev and S. M. Ustinov,[[BR]]
+   ''A method for finding the distance between a point and a line in
+   geodesy'' (in Russian),
+   Comput. Telcomm. Control '''6'''(234), 33--44 (2015).[[BR]]
+   https://doi.org/10.5862/JCSTCS.234.4 (broken)[[BR]]
+   https://infocom.spbstu.ru/en/article/2015.47.4
+ * V. A. Botnev and S. M. Ustinov,[[BR]]
+   ''Distance finding method between a point and a segment
+   in navigation'' (in Russian),
+   Comput. Telcomm. Control '''12'''(2), 68--79 (2019).[[BR]]
+   https://doi.org/10.18721/JCSTCS.12206
  * C. Jekeli,[[BR]]
    ''Geometric reference systems in geodesy'',
    Division. of Geodetic Science,
@@ -1786,7 +1802,7 @@
    ''Performance of a solution of the direct geodetic
    problem by Taylor series of Cartesian coordinates''.
    J. Geodetic Science '''11'''(1), 122--130 (2021).[[BR]]
-   https://doi.org/10.1515/jogs-2020-0127 [[BR]]
+   https://doi.org/10.1515/jogs-2020-0127
  * E. Nowak and J. Nowak Da Costa,[[BR]]
    ''Theory, strict formula derivation and algorithm development for the
    computation of a geodesic polygon area'',
