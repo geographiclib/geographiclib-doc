@@ -3,7 +3,7 @@ add_custom_command (OUTPUT biblio.html
     ${CMAKE_CURRENT_SOURCE_DIR}/geodesic-biblio.txt
   COMMAND sh ${CMAKE_CURRENT_SOURCE_DIR}/biblio.sh
     < ${CMAKE_CURRENT_SOURCE_DIR}/geodesic-biblio.txt > biblio.html )
-  
+
 add_custom_target (bib DEPENDS biblio.html)
 
 if (RSYNC)

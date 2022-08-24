@@ -136,7 +136,6 @@ The C++ library provides some online tools using GeographicLib
 * `evaluate the geoid height <../cgi-bin/GeoidEval>`_ for EGM84, EGM96, and
   EGM2008.
 
-
 Datasets
 --------
 
@@ -173,7 +172,6 @@ High quality test data is used to test GeographicLib for
 * the `geodesic problem <https://doi.org/10.5281/zenodo.32156>`_
 * the `transverse Mercator projection <https://doi.org/10.5281/zenodo.32470>`_
 * `geoid heights <../C++/doc/geoid.html#testgeoid>`_
-
 
 Other implementations
 ---------------------

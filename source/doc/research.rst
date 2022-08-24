@@ -16,7 +16,7 @@ Geodesics
     <https://arxiv.org/abs/1102.1215>`_ (Feb. 2011).
 
   * C. F. F. Karney, `Algorithms for geodesics
-    <https://doi.org/10.1007/s00190-012-0578-z>`_, 
+    <https://doi.org/10.1007/s00190-012-0578-z>`_,
     J. Geodesy **87**\ (1), 43–55 (Jan. 2013); `geodesic addenda
     <../geod-addenda.html>`_.
 
