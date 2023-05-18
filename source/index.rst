@@ -7,7 +7,7 @@ GeographicLib
 =============
 
 **GeographicLib** is collection of libraries descended from an original
-C++ library by `Charles Karney <mailto:charles@karney.com>`_ which
+C++ library by `Charles Karney <mailto:karney@alum.mit.edu>`_ which
 started in 2008.  That `C++ library <C++/doc/index.html>`_ now offers:
 
 * geodesic and rhumb line calculations;

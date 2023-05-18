@@ -25,7 +25,7 @@ cat <<'EOF'
       may not have access to the full text of some Google Books; in
       those cases, I have provided a "pdf" link.  See the files in <a
       href=".">geodesic-papers</a>. Please let me, Charles Karney
-      <a href="mailto:charles@karney.com">&lt;charles@karney.com&gt;</a>,
+      <a href="mailto:karney@alum.mit.edu">&lt;karney@alum.mit.edu&gt;</a>,
       know of errors, omissions, etc.  In particular, I'm interested to
       learn of any cases where I have mis-translated the title of a
       paper.  In addition, the links to Google Books occasionally get
