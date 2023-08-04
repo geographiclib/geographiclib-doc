@@ -219,9 +219,7 @@
    ''Traité des Fonctions Elliptiques et des Intégrales Eulériennes
    [Treatise on Elliptic Functions and Eulerian Integrals]'',
    Vol. 1 (Huzard-Courcier, Paris, 1825), pp. 360--364.[[BR]]
-   https://books.google.com/books?id=vaAKAAAAYAAJ&pg=PA360 [[BR]]
-   figures:
-   https://gallica.bnf.fr/ark:/12148/bpt6k110147r/f600.item
+   https://gallica.bnf.fr/ark:/12148/bpt6k110147r
  * N. Bowditch,[[BR]]
    ''The New American Practical Navigator''
    (Newburyport, Mass., 1802).[[BR]]
@@ -680,7 +678,7 @@
    [Geometry, Verbal communication of J. Liouville]'',
    Comptes Rendus '''21''', 1410--1411 (1845).[[BR]]
    https://books.google.com/books?id=vnFFAAAAcAAJ&pg=PA1410 [[BR]]
-   https://gallica.bnf.fr/ark:/12148/bpt6k64491361/f20.item
+   https://gallica.bnf.fr/ark:/12148/bpt6k64491361/f20
  * M. Roberts,[[BR]]
    ''Sur quelques propriétés des lignes géodésiques et des lignes de
    courbure de l'ellipsoïde [Properties of geodesics and lines of
@@ -1076,8 +1074,6 @@
    quelconque [Determinations of geographic positions on an arbitrary
    ellipsoid]'',
    Comptes Rendus '''76''', 410--413 (1873).[[BR]]
-   https://books.google.com/books?id=lqJDAQAAIAAJ&pg=PA410
-   (PDF comprendus-V76.pdf) [[BR]]
    https://gallica.bnf.fr/ark:/12148/bpt6k3033b/f410
  * H. M. Jeffery,[[BR]]
    ''On the duals of geodesics and lines of curvature on an ellipsoid and
@@ -1088,8 +1084,6 @@
    ''Sur le calcul des coordonnées géodésiques [On the calculation of
    geodesic coordinates]'',
    Comptes Rendus '''80''', 36--40 (1875).[[BR]]
-   https://books.google.com/books?id=vE9EAQAAIAAJ&pg=PA36
-   (PDF comprendus-V80.pdf) [[BR]]
    https://gallica.bnf.fr/ark:/12148/bpt6k3037k/f36
  * F. R. Helmert,[[BR]]
    ''Einfache Ableitung Gaussischen Formeln für die Auflösung einer
@@ -1137,8 +1131,6 @@
    ''Sur les intégrales rationnelles du problème des lignes géodésiques
    [On the rational integrals of geodesic lines]'',
    Comptes Rendus '''85''', 1065--1068 (1877).[[BR]]
-   https://books.google.com/books?id=H9JEAQAAMAAJ&pg=PA1065
-   (PDF comprendus-V85.pdf) [[BR]]
    https://gallica.bnf.fr/ark:/12148/bpt6k30429/f1060
  * K. Schwering,[[BR]]
    ''Neue geometrische Darstellung der geodätischen Linie auf dem
@@ -1211,7 +1203,7 @@
    Math. Ann. '''14'''(4), 557--566 (1879).[[BR]]
    https://books.google.com/books?id=CwgPAAAAIAAJ&pg=PA557
    (PDF mathann-V14.pdf)
-   [[[BR]] https://doi.org/10.1007/BF01445142 [[BR]]
+   [[BR]] https://doi.org/10.1007/BF01445142 [[BR]]
    figures:
    https://geographiclib.sourceforge.io/geodesic-papers/braunmuehl79-fig.pdf
  * A. v. Braunmühl,[[BR]]
@@ -1417,12 +1409,12 @@
    ''Leçons sur la Théorie Générale des Surfaces
    [Lessons on the General Theory of Surfaces]'',
    Vol. 2 (Gauthier-Villars, 1889), Book 4, Chap. 14.[[BR]]
-   https://books.google.com/books?id=_apXAAAAYAAJ&pg=PA291 (PDF darboux89.pdf)
+   https://gallica.bnf.fr/ark:/12148/bpt6k77831k/f296
  * J. G. Darboux,[[BR]]
    ''Leçons sur la Théorie Générale des Surfaces
    [Lessons on the General Theory of Surfaces]'',
    Vol. 3 (Gauthier-Villars, 1894), Book 6, Chaps. 1--3.[[BR]]
-   https://books.google.com/books?id=hGMSAAAAIAAJ&pg=PA1 (PDF darboux94.pdf)
+   https://gallica.bnf.fr/ark:/12148/bpt6k778307/f9
  * M. F. Khandrikov,[[BR]]
    ''Odno iz resheniy osnovnogo voprosa geodezii [One solution to the
    fundamental problem of geodesy]'',
