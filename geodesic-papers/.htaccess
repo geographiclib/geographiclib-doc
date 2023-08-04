@@ -1,6 +1,6 @@
 Options Indexes
 IndexOptions DescriptionWidth=*
-IndexIgnore HEADER.html FOOTER.html bagratuni67.pdf christoffel-V1.pdf comprendus-V76.pdf comprendus-V80.pdf comprendus-V85.pdf darboux89.pdf darboux94.pdf dusejour89-add.pdf helmert80-en.html helmert80-en.pdf helmert84-en.html helmert84-en.pdf helmert84.pdf ivory26-add.pdf lambert72.pdf quartjour26-extracts.pdf transams-V6.pdf vincenty75b.pdf
+IndexIgnore HEADER.html FOOTER.html bagratuni67.pdf christoffel-V1.pdf comprendus-V76.pdf comprendus-V80.pdf comprendus-V85.pdf crelle-V86.pdf crelle-V91.pdf darboux89.pdf darboux94.pdf dusejour89-add.pdf helmert80-en.html helmert80-en.pdf helmert84-en.html helmert84-en.pdf helmert84.pdf ivory26-add.pdf lambert72.pdf legendre06-add.pdf legendre25-fig.pdf quartjour26-extracts.pdf transams-V6.pdf vincenty75b.pdf
 ReadmeName FOOTER.html
 AddDescription "A geodesic bibliography" biblio.html
 AddDescription "Bernoulli (1728), missing figures from Google scan" bernoulli28-fig.pdf
