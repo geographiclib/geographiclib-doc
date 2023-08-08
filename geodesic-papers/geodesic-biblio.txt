@@ -164,13 +164,11 @@
    (1790--91, publ. 1793).[[BR]]
    https://books.google.com/books?id=yZH2VQBt4CkC&pg=PA100
  * G. Monge,[[BR]]
-   ''Sur les lignes de courbure de la surface de l'ellipsoïde
+   ''Des lignes de courbure de la surface de l'ellipsoïde
    [On the lines of curvature on the surface of the ellipsoid]'' (1796),
    in ''Application de l'Analyse à la Géometrie''
    (5th edition, Bachelier, Paris, 1850), pp. 139--160.[[BR]]
-   https://books.google.com/books?id=Nf5zhlffjd0C&pg=PA139 [[BR]]
-   figures:
-   https://geographiclib.sourceforge.io/geodesic-papers/monge50-fig.pdf
+   https://doi.org/10.3931/e-rara-57893
  * P. S. Laplace,[[BR]]
    ''Traité de Mécanique Céleste'', Vol. 2 (Duprat, Paris, 1798/1799),
    Book 3, Chap. 5; reprinted in
@@ -296,7 +294,7 @@
  * P. C. F. Dupin,[[BR]]
    ''Développements de géométrie [Developments in geometry]''
    (Courcier, Paris, 1813), Part 5.[[BR]]
-   https://books.google.com/books?id=j40AAAAAMAAJ&pg=PA297
+   https://gallica.bnf.fr/ark:/12148/bpt6k9734773w/f327
  * E. G. F. Thune,[[BR]]
    ''Tentamen circa trigonometriam sphaeroidicam
    [Essay on spheroidal trigonometry]''
@@ -343,7 +341,6 @@
    rélatifs à la rectification d'un arc de méridien [A new way to shorten
    the rectification of a meridian arc]'',
    Comptes Rendus '''13''', 53--55 (1841).[[BR]]
-   https://books.google.com/books?id=XWpGAQAAMAAJ&pg=PA53 [[BR]]
    https://gallica.bnf.fr/ark:/12148/bpt6k29723/f55
  * J. J. Littrow,[[BR]]
    ''Theoretische und practishe Astronomie
@@ -510,7 +507,7 @@
    ''General Investigations of Curved Surfaces of 1827 and 1825'',
    by J. C. Morehead and A. M. Hiltebeitel
    (Princeton Univ. Lib., 1902).[[BR]]
-   https://books.google.com/books?id=a1wTJR3kHwUC (PDF gauss28-en.pdf)
+   https://www.gutenberg.org/files/36856/36856-pdf.pdf
  * C. F. Gauss,[[BR]]
    ''Untersuchungen über Gegenstände der höheren Geodäsie,
    [Investigations on Higher Geodesy, Parts 1 & 2]'',
@@ -564,12 +561,10 @@
    https://www.digizeitschriften.de/id/243919689_0019|log20 [[BR]]
    https://doi.org/10.1515/crll.1839.19.309 [[BR]]
    French translation: Jour. Liouville '''6''', 267--272 (1841).[[BR]]
-   https://books.google.com/books?id=Rh8GAAAAYAAJ&pg=RA1-PA267 [[BR]]
    http://sites.mathdoc.fr/JMPA/PDF/JMPA_1841_1_6_A20_0.pdf
    [[BR]]Letter to Bessel, Dec. 28, 1838:
    https://books.google.com/books?id=_09tAAAAMAAJ&pg=PA385 (PDF jacobi-V7.pdf)
    [[BR]]Announcement: Comptes Rendus '''8''', 284 (1839).[[BR]]
-   https://books.google.com/books?id=J6sbAAAAMAAJ&pg=PA284 [[BR]]
    https://gallica.bnf.fr/ark:/12148/bpt6k2967c/f290
  * C. G. J. Jacobi,[[BR]]
    ''Bestimmungen der geodätischen Linie auf einem dreiaxiges Ellipsoid
@@ -641,12 +636,11 @@
  * P.Q.R. (W. Thomson, Lord Kelvin),[[BR]]
    ''Elementary demonstration of Dupin's theorem'',
    Camb. Math. Jour. '''4'''(20), 62--64 (1844).[[BR]]
-   https://books.google.com/books?id=vtxEAAAAcAAJ&pg=PA62
+   https://gdz.sub.uni-goettingen.de/id/PPN600493016_0004?tify={"pages":[70]}
  * J. Liouville,[[BR]]
    ''De la ligne géodésique sur un ellipsoïde quelconque
    [The geodesic on an arbitrary ellipsoid]'',
    Jour. Liouville '''9''', 401--408 (1844).[[BR]]
-   https://books.google.com/books?id=7oYGAAAAYAAJ&pg=PA401 [[BR]]
    http://sites.mathdoc.fr/JMPA/PDF/JMPA_1844_1_9_A37_0.pdf
  * J. Liouville,[[BR]]
    ''Démonstration géométrique relative à l'équation des lignes
@@ -654,14 +648,12 @@
    demonstration of the equation for geodesic lines on the surfaces of
    the second degree]'',
    Jour. Liouville '''11''', 21--24 (1846).[[BR]]
-   https://books.google.com/books?id=qTUGAAAAYAAJ&pg=PA21 [[BR]]
    http://sites.mathdoc.fr/JMPA/PDF/JMPA_1846_1_11_A3_0.pdf
  * J. Liouville,[[BR]]
    ''Sur quelques cas particuliers où les équations du mouvement d'un
    point matériel peuvent s'intégrer [Special cases where the equations
    of motion are integrable]'',
    Jour. Liouville '''11''', 345--378 (1846).[[BR]]
-   https://books.google.com/books?id=qTUGAAAAYAAJ&pg=PA345 [[BR]]
    http://sites.mathdoc.fr/JMPA/PDF/JMPA_1846_1_11_A45_0.pdf
  * J. Liouville,[[BR]]
    Notes on G. Monge, ''Application de l'Analyse à la Géometrie''
@@ -671,21 +663,22 @@
    ''Sur la théorie générale des surfaces
    [On the general theory of surfaces]'',
    Jour. Liouville '''16''', 130--132 (1851).[[BR]]
-   https://books.google.com/books?id=TFdOAAAAMAAJ&pg=PA130 [[BR]]
    http://sites.mathdoc.fr/JMPA/PDF/JMPA_1851_1_16_A4_0.pdf
  * M. Roberts,[[BR]]
    ''Géométrie, Communication verbale de M. Liouville
    [Geometry, Verbal communication of J. Liouville]'',
    Comptes Rendus '''21''', 1410--1411 (1845).[[BR]]
-   https://books.google.com/books?id=vnFFAAAAcAAJ&pg=PA1410 [[BR]]
    https://gallica.bnf.fr/ark:/12148/bpt6k64491361/f20
  * M. Roberts,[[BR]]
    ''Sur quelques propriétés des lignes géodésiques et des lignes de
    courbure de l'ellipsoïde [Properties of geodesics and lines of
    curvature on an allispoid]'',
    Jour. Liouville '''11''', 1--4 (1846).[[BR]]
-   https://books.google.com/books?id=qTUGAAAAYAAJ&pg=PA1 [[BR]]
    http://sites.mathdoc.fr/JMPA/PDF/JMPA_1846_1_11_A1_0.pdf
+ * M. Roberts,[[BR]]
+   ''On the lines of curvature of the surface of an ellipsoid'',
+   Proc. Roy. Irish Acad. '''3''', 383--385 (1847).[[BR]]
+   https://www.jstor.org/stable/20489620
  * M. Roberts,[[BR]]
    ''Nouvelles propriétés des lignes géodésiques et des lignes de
    courbure sur l'ellipsoïde [New properties of geodesics and lines of
@@ -693,9 +686,9 @@
    Jour. Liouville '''13''', 1--11 (1848).[[BR]]
    http://sites.mathdoc.fr/JMPA/PDF/JMPA_1848_1_13_A1_0.pdf
  * M. Roberts,[[BR]]
-   Theorems on the lines of curvature of an ellipsoid
+   ''Theorems on the lines of curvature of an ellipsoid'',
    Camb. Dublin Math. Jour. '''3''', 159--163 (1848).[[BR]]
-   https://books.google.com/books?id=3hVbAAAAYAAJ&pg=PA159
+   https://gdz.sub.uni-goettingen.de/id/PPN600493962_0003?tify={"pages":[185]}
  * M. Roberts,[[BR]]
    ''Mémoire sur la géométrie de courbes tracées sur la surface d'un
    ellipsoïde [The geometry of curves on the surface of an ellipsoid]'',
@@ -705,13 +698,12 @@
    ''Sur quelques applications de la théorie des surfaces
    [Some applications of the theory of surfaces]'',
    Nouvelles Annales de Mathématiques '''14''', 268--271 (1855).[[BR]]
-   https://books.google.com/books?id=BwcAAAAAMAAJ&pg=PA268
+   http://www.numdam.org/item/NAM_1855_1_14__268_1.pdf
  * M. Chasles,[[BR]]
    ''Sur les lignes géodésiques et les lignes de courbure des surfaces
    du second degré [Geodesic lines and the lines of curvature of the
    surfaces of the second degree]'',
    Jour. Liouville '''11''', 5--20 (1846).[[BR]]
-   https://books.google.com/books?id=qTUGAAAAYAAJ&pg=PA5 [[BR]]
    http://sites.mathdoc.fr/JMPA/PDF/JMPA_1846_1_11_A2_0.pdf
  * M. Chasles,[[BR]]
    ''Nouvelles démonstrations des deux équations relatives aux tangentes
@@ -721,7 +713,6 @@
    confocal surfaces of the second degree; and properties of the
    geodesic lines and the lines of curvature of these surfaces]'',
    Jour. Liouville '''11''', 105--119 (1846).[[BR]]
-   https://books.google.com/books?id=qTUGAAAAYAAJ&pg=PA105 [[BR]]
    http://sites.mathdoc.fr/JMPA/PDF/JMPA_1846_1_11_A14_0.pdf
  * L. Schläfli,[[BR]]
    ''Bemerkungen über confocale Flächen zweiten Grades und die geodätische
@@ -738,19 +729,16 @@
    ''Sur quelques propriétés des lignes géodésiques
    [Some properties for geodesic lines]'',
    Comptes Rendus '''40''', 1311--1313 (1855).[[BR]]
-   https://books.google.com/books?id=v28kAQAAIAAJ&pg=PA1311 [[BR]]
    https://gallica.bnf.fr/ark:/12148/bpt6k29976/f1308
  * P. O. Bonnet,[[BR]]
    [Note sur la courbure géodésique [A note on geodesic curvature]'',
    Comptes Rendus '''42''', 1137--1139 (1856).[[BR]]
-   https://books.google.com/books?id=wQBBAQAAMAAJ&pg=PA1137 [[BR]]
    https://gallica.bnf.fr/ark:/12148/bpt6k2999t/f1135
  * P. O. Bonnet,[[BR]]
    ''Démonstration du théorème de Gauss relatif aux petits triangles
    géodésiques situés sur une surface courbe quelconque [Demomstration of
    Gauss' theorem on small geodesic triangles for arbitrary surfaces]'',
    Comptes Rendus '''58''', 183--188 (1864).[[BR]]
-   https://books.google.com/books?id=ibUxAQAAMAAJ&pg=PA183 [[BR]]
    https://gallica.bnf.fr/ark:/12148/bpt6k3015d/f185
  * J. Bertrand,[[BR]]
    ''Démonstration géométrique de quelques théorèmes relatifs à la
@@ -770,20 +758,18 @@
  * A. S. Hart,[[BR]]
    ''On the form of geodesic lines through the umbilic of an ellipsoid'',
    Proc. Roy. Irish Acad. '''4''', 274 (1849).[[BR]]
-   https://books.google.com/books?id=V16tNNTxUbQC&pg=PA274 [[BR]]
    https://www.jstor.org/stable/20520288
  * A. S. Hart,[[BR]]
    ''Geometrical demonstration of some properties of geodesic lines'',
    Camb. Dublin Math. Jour. '''4''', 80--84 (1849).[[BR]]
-   https://books.google.com/books?id=ClAeAQAAMAAJ&pg=PA80
+   https://gdz.sub.uni-goettingen.de/id/PPN600493962_0004?tify={"pages":[84]}
  * A. S. Hart,[[BR]]
    ''On geodesics lines traced on a surface of the second degree'',
    Camb. Dublin Math. Jour. '''4''', 192--194 (1849).[[BR]]
-   https://books.google.com/books?id=ClAeAQAAMAAJ&pg=PA192
+   https://gdz.sub.uni-goettingen.de/id/PPN600493962_0004?tify={"pages":[196]}
  * C. Graves,[[BR]]
    ''On geodetic lines in surfaces of the second order'',
    Proc. Roy. Irish Acad. '''4''', 283--287 (1850).[[BR]]
-   https://books.google.com/books?id=QTpJAAAAcAAJ&pg=PA283 [[BR]]
    https://www.jstor.org/stable/20520292
  * C. Graves,[[BR]]
    ''Elementary geometrical proof of Joachimsthal's theorem'',
@@ -799,7 +785,6 @@
    ''Sur la rectification des angles dans le calcul des triangles géodésiques
    [Rectifying angles in the solution of geodesic triangles]'',
    Comptes Rendus '''31''', 409--418 (1850).[[BR]]
-   https://books.google.com/books?id=7B1IAQAAMAAJ&pg=PA409 [[BR]]
    https://gallica.bnf.fr/ark:/12148/bpt6k29887/f409
  * A. R. Clarke,[[BR]]
    ''On the measurement of azimuths on a spheroid'',
@@ -861,7 +846,6 @@
    developable surfaces whose generatrices are parallel to those of an
    ruled surface]'',
    Jour. Liouville '''4''', 347--365 (1859).[[BR]]
-   https://books.google.com/books?id=SVhaAAAAYAAJ&pg=PA347 [[BR]]
    http://sites.mathdoc.fr/JMPA/PDF/JMPA_1859_2_4_A31_0.pdf
  * H. Molins,[[BR]]
    ''Sur les lignes gèodésiques tracées sur une surface développable donnée
@@ -889,7 +873,6 @@
    ellipsoidal geodesics and its use to determine the properties common to
    ellipsoidal lines and the corresponding plane curves]'',
    Comptes Rendus '''50''', 484--489 (1860).[[BR]]
-   https://books.google.com/books?id=lh5IAQAAMAAJ&pg=PA484 [[BR]]
    https://gallica.bnf.fr/ark:/12148/bpt6k3007r/f488
  * K. T. W. Weierstrass,[[BR]]
    ''Über die geodätischen Linien auf dem dreiaxigen Ellipsoid
@@ -903,9 +886,8 @@
    dem Ellipsoid [Geodesic arcs of algebraic longitude difference on the
    ellipsoid]'',
    Math. Ann. '''20'''(2), 185--186 (1862).[[BR]]
-   https://books.google.com/books?id=YQkPAAAAIAAJ&pg=PA185
-   (PDF mathann-V20.pdf)
-   [[[BR]] https://doi.org/10.1007/BF01446520
+   https://gdz.sub.uni-goettingen.de/id/PPN235181684_0020?tify={"pages":[199]}
+   [[BR]] https://doi.org/10.1007/BF01446520
  * A. Allégret,[[BR]]
    ''Essai sur le Calcul des Quaternions de M. W. Hamilton
    [Essay on Hamilton's Quaternions]]'' (Leiber, Paris, 1862), Sec. 3.[[BR]]
@@ -914,7 +896,6 @@
    ''Mémoire sur la flexion des lignes géodésiques tracées sur une même
    surface quelconque [The bending of geodesics on an arbitrary surface]'',
    Comptes Rendus '''66''', 342--344 (1868).[[BR]]
-   https://books.google.com/books?id=cpVDAQAAIAAJ&pg=PA342 [[BR]]
    https://gallica.bnf.fr/ark:/12148/bpt6k30232/f344
  * P. A. Gordan,[[BR]]
    ''De linea geodetica [On geodesic lines]''
@@ -1007,7 +988,6 @@
    [A limit on the errors applying the theory of geodesic lines to
    triangulation]'',
    Comptes Rendus '''62''', 850--851 (1866).[[BR]]
-   https://books.google.com/books?id=HrVotkK9Wq4C&pg=PA850 [[BR]]
    https://gallica.bnf.fr/ark:/12148/bpt6k3019n/f850
  * E. B. Christoffel,[[BR]]
    ''Allgemeine Theorie der geodätischen Dreiecke
@@ -1201,29 +1181,26 @@
    ''Über Enveloppen geodätischer Linien
    [The envelopes of geodesic lines]'',
    Math. Ann. '''14'''(4), 557--566 (1879).[[BR]]
-   https://books.google.com/books?id=CwgPAAAAIAAJ&pg=PA557
-   (PDF mathann-V14.pdf)
+   https://gdz.sub.uni-goettingen.de/id/PPN235181684_0014?tify={"pages":[583]}
+   [[BR]]figures:
+   https://gdz.sub.uni-goettingen.de/id/PPN235181684_0014?tify={"pages":[604]}
    [[BR]] https://doi.org/10.1007/BF01445142 [[BR]]
-   figures:
-   https://geographiclib.sourceforge.io/geodesic-papers/braunmuehl79-fig.pdf
  * A. v. Braunmühl,[[BR]]
    ''Geodätische Linien und ihre Enveloppen auf dreiaxigen Flächen
    zweiten Grades [Geodesic lines and their envelopes on
    three-dimensional surfaces of second order]'',
    Math. Ann. '''20'''(4), 557--586 (1882).[[BR]]
-   https://books.google.com/books?id=YQkPAAAAIAAJ&pg=PA557
-   (PDF mathann-V20.pdf)
-   [[BR]] https://doi.org/10.1007/BF01540145 [[BR]]
-   figures:
-   https://geographiclib.sourceforge.io/geodesic-papers/braunmuehl82-fig.pdf
+   https://gdz.sub.uni-goettingen.de/id/PPN235181684_0020?tify={"pages":[580]}
+   [[BR]]figures:
+   https://gdz.sub.uni-goettingen.de/id/PPN235181684_0020?tify={"pages":[630]}
+   [[BR]] https://doi.org/10.1007/BF01540145
  * A. v. Braunmühl,[[BR]]
    ''Über die reducirte Länge eines geodätischen Bogens und die Bildung
    jener Flächen deren Normalen eine gegebene Fläche berühren [The reduced
    length of a geodesic and the formation of surfaces whose normals touch a
    given surface]'',
    Abhand. König. Bay. Akad. der Wiss. '''14'''(3), 93--110 (1883).[[BR]]
-   https://books.google.com/books?id=1qRGAQAAMAAJ&pg=RA2-PA91
-   (PDF bayerisch-V14.pdf)
+   https://publikationen.badw.de/de/003083004
  * H. Bruns,[[BR]]
    ''Bemerkung über die geodätische Linie [A remark about the geodesic
    line]'',
@@ -1324,15 +1301,13 @@
    ''Untersuchungen über geodätischen Curben
    [On geodesic curves]'',
    Math. Ann. '''20'''(3), 357--454 (1882).[[BR]]
-   https://books.google.com/books?id=YQkPAAAAIAAJ&pg=PA357
-   (PDF mathann-V20.pdf)
-   [[[BR]] https://doi.org/10.1007/BF01443601
+   https://gdz.sub.uni-goettingen.de/id/PPN235181684_0020?tify={"pages":[376]}
+   [[BR]] https://doi.org/10.1007/BF01443601
  * A. Brill,[[BR]]
    ''Zur Theorie der geodätischen Linie und des geodätischen Dreiecks
    [The theory of geodesic lines and geodesic trangles]'',
    Abhand. König. Bay. Akad. der Wiss. '''14'''(2), 111--140 (1883).[[BR]]
-   https://books.google.com/books?id=1qRGAQAAMAAJ&pg=PA110-IA1
-   (PDF bayerisch-V14.pdf)
+   https://publikationen.badw.de/de/003082996
  * J. H. L. Krüger,[[BR]]
    ''Die geodätische Linie des Sphäroids und Untersuchung darüber, wann
    dieselbe aufhört, kürzeste Linie zu sein [The geodesic line on a

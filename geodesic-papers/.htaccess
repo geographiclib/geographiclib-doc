@@ -1,17 +1,14 @@
 Options Indexes
 IndexOptions DescriptionWidth=*
-IndexIgnore HEADER.html FOOTER.html bagratuni67.pdf christoffel-V1.pdf comprendus-V76.pdf comprendus-V80.pdf comprendus-V85.pdf crelle-V86.pdf crelle-V91.pdf darboux89.pdf darboux94.pdf dusejour89-add.pdf helmert80-en.html helmert80-en.pdf helmert84-en.html helmert84-en.pdf helmert84.pdf ivory26-add.pdf lambert72.pdf legendre06-add.pdf legendre25-fig.pdf quartjour26-extracts.pdf transams-V6.pdf vincenty75b.pdf
+IndexIgnore HEADER.html FOOTER.html bagratuni67.pdf bayerisch-V14.pdf braunmuehl79-fig.pdf braunmuehl82-fig.pdf christoffel-V1.pdf comprendus-V76.pdf comprendus-V80.pdf comprendus-V85.pdf crelle-V86.pdf crelle-V91.pdf darboux89.pdf darboux94.pdf dusejour89-add.pdf gauss28-en.pdf helmert80-en.html helmert80-en.pdf helmert84-en.html helmert84-en.pdf helmert84.pdf ivory26-add.pdf lambert72.pdf legendre06-add.pdf legendre25-fig.pdf mathann-V14.pdf mathann-V20.pdf monge50-fig.pdf quartjour26-extracts.pdf transams-V6.pdf vincenty75b.pdf
 ReadmeName FOOTER.html
 AddDescription "A geodesic bibliography" biblio.html
 AddDescription "Bernoulli (1728), missing figures from Google scan" bernoulli28-fig.pdf
-AddDescription "Braunmühl (1879), missing figures from Google scan" braunmuehl79-fig.pdf
-AddDescription "Braunmühl (1882), missing figures from Google scan" braunmuehl82-fig.pdf
 AddDescription "du Séjour (1789), missing figures from Google scan" dusejour89-fig.pdf
 AddDescription "Forsyth (1896b), missing page from Google scan" forsyth96b-add.pdf
 AddDescription "Gauss, Untersuchungen ... Geodäsie (1843, 1846)" gauss43.pdf
 AddDescription "Krüger, dissertation (1883)" krueger83.pdf
 AddDescription "Laplace, Méc. Cél. 2 (1799), Bowditch transl. (1832)" laplace99a.pdf
-AddDescription "Monge (1850), missing figures from Google scan" monge50-fig.pdf
 AddDescription "Puissant (1819), missing pages from Google scan" puissant19b-add.pdf
 AddDescription "Puissant (1819), missing figures from Google scan" puissant19b-fig.pdf
 AddDescription "Soldner, Theorie der Landesvermessung (1810)" soldner10.pdf
@@ -19,7 +16,6 @@ AddDescription "Thune, Trigonometriam Sphaeroidicam (1815)" thune15.pdf
 AddDescription "Shebuev, Geometricheskiye osnovaniya geodezii ... (1896)" shebuev96.pdf
 AddDescription "Shebuev, Rasstoyaniya, azimuty i treugolniki ... (1898)" shebuev98.pdf
 AddDescription "Krasovsky, Opredeleniye razmerov zemnogo ... (1902)" krasovsky02.pdf
-AddDescription "Abh. Bayerischen Akad. 14, 1883 (<a href=https://books.google.com/books?id=1qRGAQAAMAAJ>id=1qRGAQAAMAAJ</a>)" bayerisch-V14.pdf
 AddDescription "Albrecht, Formeln, 1894 (<a href=https://books.google.com/books?id=muYRAAAAYAAJ>id=muYRAAAAYAAJ</a>)" albrecht94.pdf
 AddDescription "The Analyst 3&ndash;4, 1876&ndash;77 (<a href=https://books.google.com/books?id=eKYEAAAAQAAJ>id=eKYEAAAAQAAJ</a>)" analyst-V3-4.pdf
 AddDescription "Ann. l'École Polytechique Delft 1&ndash;3, 1885&ndash;1888 (<a href=https://books.google.com/books?id=Rw1HAQAAMAAJ>id=Rw1HAQAAMAAJ</a>)" anndelft-V1-3.pdf
@@ -37,7 +33,6 @@ AddDescription "Euler, Spherical Trig., 1753, 1779 (<a href=https://books.google
 AddDescription "Fricke, Mathematik, 1900 (<a href=https://books.google.com/books?id=bSsLAAAAYAAJ>id=bSsLAAAAYAAJ</a>)" fricke00.pdf
 AddDescription "Frost, Solid Geometry, 1886 (<a href=https://books.google.com/books?id=ym1LAAAAMAAJ>id=ym1LAAAAMAAJ</a>)" frost86.pdf
 AddDescription "Gauss, Flächentheorie, 1828 (<a href=https://books.google.com/books?id=W2UEAAAAYAAJ>id=W2UEAAAAYAAJ</a>)" gauss28-de.pdf
-AddDescription "Gauss, Curved Surfaces, 1828 (<a href=https://books.google.com/books?id=a1wTJR3kHwUC>id=a1wTJR3kHwUC</a>)" gauss28-en.pdf
 AddDescription "Gauss 9, 1903 (<a href=https://books.google.com/books?id=ICwPAAAAIAAJ>id=ICwPAAAAIAAJ</a>)" gauss-V9.pdf
 AddDescription "Gore, Bibliography, 1889 (<a href=https://books.google.com/books?id=K38hAAAAMAAJ>id=K38hAAAAMAAJ</a>)" gore89.pdf
 AddDescription "Gore, Geodesy, 1893 (<a href=https://books.google.com/books?id=h-8ZAAAAYAAJ>id=h-8ZAAAAYAAJ</a>)" gore93.pdf
@@ -48,8 +43,6 @@ AddDescription "Jordan 3, 1896 (<a href=https://books.google.com/books?id=4KgRAA
 AddDescription "Knoblauch, Flächen, 1888 (<a href=https://books.google.com/books?id=zPdMAAAAMAAJ>id=zPdMAAAAMAAJ</a>)" knoblauch88.pdf
 AddDescription "London Math. Soc. 27, 1896 (<a href=https://books.google.com/books?id=vUOcAAAAMAAJ>id=vUOcAAAAMAAJ</a>)" londonmathsoc-V27.pdf
 AddDescription "Mat. sbornik 17, 1893 (<a href=https://books.google.com/books?id=34_xAAAAMAAJ>id=34_xAAAAMAAJ</a>)" matsbornik-V17.pdf
-AddDescription "Math. Ann. 14, 1879 (<a href=https://books.google.com/books?id=CwgPAAAAIAAJ>id=CwgPAAAAIAAJ</a>)" mathann-V14.pdf
-AddDescription "Math. Ann. 20, 1882 (<a href=https://books.google.com/books?id=YQkPAAAAIAAJ>id=YQkPAAAAIAAJ</a>)" mathann-V20.pdf
 AddDescription "Messenger Math. 25, 1896 (<a href=https://books.google.com/books?id=YsAKAAAAIAAJ>id=YsAKAAAAIAAJ</a>)" messmath-V25.pdf
 AddDescription "Nouv. Ann. de Math. 6, 1887 (<a href=https://books.google.com/books?id=QNw_AQAAMAAJ>id=QNw_AQAAMAAJ</a>)" nouvannmath-V6.pdf
 AddDescription "Ostwald's Klass. 55, 1894 (<a href=https://books.google.com/books?id=O4AOAAAAYAAJ>id=O4AOAAAAYAAJ</a>)" ostwald-N55.pdf
