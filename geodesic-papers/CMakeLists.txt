@@ -21,4 +21,5 @@ if (RSYNC)
   add_custom_target (deploy-bib
     COMMAND
       ${RSYNC} --delete -av --exclude '*~' -e ssh ${DOCROOT} ${WEBDEPLOY}/ )
+  add_dependencies (deploy-bib stage-bib)
 endif ()

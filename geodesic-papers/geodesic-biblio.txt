@@ -212,7 +212,7 @@
    ''Exercices de Calcul Intégral sur Divers Ordres de Transcendantes et
    sur les Quadratures [Exercises in Integral Calculus]'',
    Vol. 1 (Courcier, Paris, 1811), pp. 178--182.[[BR]]
-   https://iris.univ-lille.fr/handle/1908/1541
+   https://lillonum.univ-lille.fr/s/lillonum/ark:/72505/bjZbcq
  * A. M. Legendre,[[BR]]
    ''Traité des Fonctions Elliptiques et des Intégrales Eulériennes
    [Treatise on Elliptic Functions and Eulerian Integrals]'',
@@ -1201,6 +1201,13 @@
    given surface]'',
    Abhand. König. Bay. Akad. der Wiss. '''14'''(3), 93--110 (1883).[[BR]]
    https://publikationen.badw.de/de/003083004
+ * A. v. Braunmühl,[[BR]]
+   ''Notiz über geodätische Linien auf den dreiaxigen Flächen zweiten
+   Grades welche durch elliptische Functionen dargestellen lassen [Note
+   on geodetic lines on the triaxial surfaces of the second degree which
+   can be represented by elliptic functions]'',
+   Math. Ann. '''26'''(n), 151--153 (1886).[[BR]]
+   https://gdz.sub.uni-goettingen.de/id/PPN235181684_0026?tify={"pages":[157]}
  * H. Bruns,[[BR]]
    ''Bemerkung über die geodätische Linie [A remark about the geodesic
    line]'',
@@ -1681,9 +1688,14 @@
    https://arxiv.org/abs/1109.4448 [[BR]]
    Addenda: https://geographiclib.sourceforge.io/geod-addenda.html
  * C. F. F. Karney,[[BR]]
-   ''Geodesics on an arbitrary ellipsoid of revolution''
-   (Aug. 2022).[[BR]]
+   ''Geodesics on an arbitrary ellipsoid of revolution'',
+   J. Geodesy '''98'''(1), 4:1--14 (2024).[[BR]]
+   https://doi.org/10.1007/s00190-023-01813-2 [[BR]]
    https://arxiv.org/abs/2208.00492
+ * C. F. F. Karney,[[BR]]
+   ''Geodesic intersections'',
+   J. Surveying Eng. (2024).[[BR]]
+   https://arxiv.org/abs/2308.00495
  * C. M. Rollins,[[BR]]
    ''An integral for geodesic length'',
    Survey Review '''42'''(315), 20--26 (2010).[[BR]]
@@ -1743,7 +1755,6 @@
    J. Navigation '''67'''(5), 825--844 (2014);[[BR]]
    Publisher's notice: J. Navigation '''68'''(1), 215--216 (2015);[[BR]]
    Errata: J. Navigation '''68'''(1), 217--218 (2015).[[BR]]
-   https://pdfs.semanticscholar.org/26be/980911266944a579278c95c1559bc441cd46.pdf [[BR]]
    https://doi.org/10.1017/S0373463314000228 [[BR]]
    https://doi.org/10.1017/S0373463314000745 [[BR]]
    https://doi.org/10.1017/S0373463314000733
