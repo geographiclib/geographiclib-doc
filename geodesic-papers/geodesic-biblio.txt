@@ -1694,7 +1694,8 @@
    https://arxiv.org/abs/2208.00492
  * C. F. F. Karney,[[BR]]
    ''Geodesic intersections'',
-   J. Surveying Eng. (2024).[[BR]]
+   J. Surveying Eng. '''150'''(3), 04024005:1--9 (2024).[[BR]]
+   https://doi.org/10.1061/JSUED2.SUENG-1483 [[BR]]
    https://arxiv.org/abs/2308.00495
  * C. M. Rollins,[[BR]]
    ''An integral for geodesic length'',
