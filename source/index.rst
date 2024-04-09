@@ -40,6 +40,7 @@ Links
 
    doc/library
    doc/research
+   doc/triaxial
 
 Indices and tables
 ==================

@@ -20,18 +20,18 @@
 root_doc = 'index'
 
 project = 'GeographicLib'
-copyright = '2009–2022, Charles Karney'
+copyright = '2009–2024, Charles Karney'
 author = 'Charles Karney'
 
 # The full version, including alpha/beta/rc tags
-release = '2.1'
+release = '2.2'
 
 # -- General configuration ---------------------------------------------------
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = []
+extensions = ['sphinx.ext.mathjax']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

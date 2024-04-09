@@ -2,11 +2,12 @@ set (SOURCEDIR "${CMAKE_CURRENT_SOURCE_DIR}")
 set (DOCSOURCES
   ${SOURCEDIR}/index.rst
   ${SOURCEDIR}/doc/library.rst
-  ${SOURCEDIR}/doc/research.rst)
+  ${SOURCEDIR}/doc/research.rst
+  ${SOURCEDIR}/doc/triaxial.rst)
 
 add_custom_target (doc ALL
-  DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/html/nindex.html)
-add_custom_command (OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/html/nindex.html
+  DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/html/index.html)
+add_custom_command (OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/html/index.html
   DEPENDS ${DOCSOURCES} ${SOURCEDIR}/conf.py
   COMMAND ${CMAKE_COMMAND} -E rm -rf html
   COMMAND ${SPHINX} -v -b html ${SOURCEDIR} html > docs.log

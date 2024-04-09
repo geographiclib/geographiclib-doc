@@ -1023,9 +1023,9 @@
    Mem. Roy. Astron. Soc. '''39''', 31--53 & plate 2 (1872),
    in ''The Collected Mathematical Papers of Arthur Cayley'',
    Vol. 7 (Cambridge Univ. Press, 1894), paper 478, pp. 493--510.[[BR]]
+   https://rcin.org.pl/dlibra/publication/178304/edition/148111 [[BR]]
    https://books.google.com/books?id=S4znAAAAMAAJ&pg=PA31
-   (PDF royastron-V39.pdf)
-   [[BR]]
+   (PDF royastron-V39.pdf) [[BR]]
    https://books.google.com/books?id=4XGIOoCMYYAC&pg=PA493 (PDF cayley-V7.pdf)
  * A. Cayley,[[BR]]
    ''On geodesic lines, in particular those of a quadric surface'',
