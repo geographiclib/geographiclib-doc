@@ -21,20 +21,28 @@ Jump to:
 Introduction
 ------------
 
-This page provided some background information for the ``triaxial`` class
-in the Octave/MATLAB package ``geographiclib``.  This component of the
-package is still in "prerelease", however, you can download the package
-from `SourceForge
-<https://sourceforge.net/projects/geographiclib/files/distrib-Octave>`_.
-Get either ``geographic_toolbox-2.2.zip`` or
-``geographiclib-octave-2.2.tar.gz``.  (These two files contain the
-same code; the directory layout for the latter file is tailored for
-Octave packages.)
+This page provided some implementation details for the ``triaxial``
+class in version 2.2 (released 2024-04-09) of the Octave/MATLAB package
+`GeographicLib
+<https://github.com/geographiclib/geographiclib-octave#readme>`_ (this
+link includes instructions on how to download and install the package).
+This involves a lot of new code so...  Expect there to be errors in the
+documentation (please report).  Also be prepared for the interface to
+change.  The class includes
+
+ * the solution of the direct and inverse geodesic problems,
+ * conversions between various coordinate systems,
+ * random sampling on the ellipsoid,
+ * functions to aid plotting curves on the ellipsoid.
 
 Once the package is in your path, type ``triaxial.doc`` to get an overview
 of the class.  You can then use, e.g., ``help triaxial.distance``, to get
 the documentation on specific routines.  Use ``triaxial.demo`` to list
-various demonstations of the geodesic capabilities.
+various demonstrations of the geodesic capabilities.
+
+The package works equally well in Octave and in MATLAB.  However note
+that the solution of the geodesic problems is about 40 times faster in
+MATLAB.
 
 .. _tricoords:
 
@@ -83,9 +91,8 @@ The *geocentric* latitude
 and longitude :math:`(\phi'', \lambda'')` are defined by
 
 .. math::
- \hat{\mathbf r} = \begin{bmatrix}
- \cos\phi'' \cos\lambda'' \\ \cos\phi'' \sin\lambda'' \\ \sin\phi''
- \end{bmatrix}.
+ \hat{\mathbf r} = (
+ \cos\phi'' \cos\lambda'' , \cos\phi'' \sin\lambda'' , \sin\phi'' ).
 
 As with ellipsoids of revolution, the geodetic, parametric, and
 geocentric coordinates are closely related to one another.
@@ -143,7 +150,7 @@ semiaxis is :math:`u`.
 Coordinate system conversions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Conversions between thes coordinate on the surface of the ellipsoid are
+Conversions between these coordinate on the surface of the ellipsoid are
 algebraic exercises.  For example, the conversion from cartesian to
 geodetic coordinates proceeds as follows
 
@@ -243,10 +250,10 @@ A few other points to note:
 * Newton's method requires about 8 times fewer iterations compared with
   the bisection method.
 * The independent variable :math:`f(p)` is shifted with respect to the
-  one used by [Ligas12]_ and [Panou+Korakitis22]_.  This gives higher precision
-  close to the singularity at :math:`p = 0`.
-* We acculate the terms in :math:`f(p)` in a two-word accumulator to
-  improved the accuacy near its root.
+  one used by [Ligas12]_ and [Panou+Korakitis22]_.  This gives higher
+  precision close to the singularity at :math:`p = 0`.
+* We accumulate the terms in :math:`f(p)` in a two-word accumulator to
+  improved the accuracy near its root.
 * To avoid potentially singular behavior, we initially "flush" tiny
   values of the components of :math:`\mathbf r` to zero.
 * In the case where :math:`z_0` is indeterminate, the sign of :math:`z`
@@ -265,8 +272,8 @@ Writing :math:`u^2 = q`, we need to find the roots of
    g(q) = \frac{x^2}{q + l_a^2} + \frac{y^2}{q + l_b^2} + \frac{z^2}{q} - 1
    = 0.
 
-The structure of :math:`g(q)` is very similiar to :math:`f(p)`.  Since
-:math:`g(q)` has 3 simple poles with positive coeffients, there are
+The structure of :math:`g(q)` is very similar to :math:`f(p)`.  Since
+:math:`g(q)` has 3 simple poles with positive coefficients, there are
 three real roots and, because the rightmost pole is at :math:`q = 0`,
 just one of them is positive.  As before, bounds can be put on this root
 :math:`q_{\mathrm{min}} \le q \le q_{\mathrm{max}}`,
@@ -294,7 +301,7 @@ Secs. 1.11(iii) and 4.43.  This method is advocated by
 error when the coefficient of :math:`q` is positive; in this case, the
 polynomial in :math:`1/q` should be solved instead.  Even so, the
 solution may be subject to unacceptable roundoff error; it may be
-refined by using as the startig point, :math:`q_0`, for Newton's method.
+refined by using as the starting point, :math:`q_0`, for Newton's method.
 If :math:`g(q_0) < 0`, then :math:`q_1` should be replaced by
 :math:`\max(q_1, q_{\mathrm{min}})`.  Typically only 3--4 iterations
 are needed to refine the solution.
@@ -320,10 +327,11 @@ Geodesics
 The problem of geodesics on a triaxial ellipsoid was solved by
 [Jacobi39]_ who reduced the problem to quadrature.  Even without
 evaluating the integrals, this solution allowed the various properties
-of geodesics to be found.
+of geodesics to be found.  For an overview, see
+[GeographicLib-triaxial]_.
 
 Explicit evaluation of Jacobi's integrals was carried out by hand by
-[Cayley72]_ and, more recently, by [Baillard13]_.  Accurate evalution of
+[Cayley72]_ and, more recently, by [Baillard13]_.  Accurate evaluation of
 the integrals involves changing the variable of integration using
 elliptic integrals and elliptic functions.  Unfortunately, Octave/MATLAB
 has poor support for these special functions, so for this implementation
@@ -374,12 +382,12 @@ picking the appropriate step size for integration.  In addition, they
 allow intermediate points on the path to be found inexpensively by
 polynomial interpolation.
 
-The demonstrations ``trixial.demo(n)`` for ``n = 1:5`` and ``n = 11:15`` show
-the result of solution of the direct problem of various initial
-conditions.  These illustrate the distinctive properties of geodesics,
-i.e., that the undulate between either lines of constant :math:`\beta`
-or lines of constant :math:`\omega`.  In the limiting case, the geodesic
-repeatedly returns to opposite umbilic points.
+The demonstrations ``triaxial.demo(n)`` for ``n = 1:5`` and ``n =
+11:15`` show the result of solution of the direct problem of various
+initial conditions.  These illustrate the distinctive properties of
+geodesics, i.e., that the undulate between either lines of constant
+:math:`\beta` or lines of constant :math:`\omega`.  In the limiting
+case, the geodesic repeatedly returns to opposite umbilical points.
 
 Note well: Octave is about 40 slower than MATLAB at solving the ODEs.
 
@@ -392,7 +400,8 @@ The inverse problem
 finding the shortest path between two points.  However, neither offers a
 complete solution.  A reliable method of solving the problem is obtained
 using the same basic method give by [Karney13]_ for solving the problem
-on an oblate ellipoid.  The key observation is that the *cut locus* for
+on an oblate ellipsoid; this is outlined in [GeographicLib-triaxial]_.
+The key observation by [Itoh+Kiyohara04]_ is that the *cut locus* for
 geodesics emanating from a given point is a segment of the line of the
 opposite ellipsoidal latitude; see ``triaxial.demo(6)``.
 
@@ -411,33 +420,38 @@ The method is somewhat fragile in that it expects geodesics to behave in
 the way dictated by Jacobi's solution; however, the ODE solver cannot
 guarantee that this is so.  However by setting reasonably tight error
 tolerances are set on the ODE solver and deploying some other defensive
-tricks, I believe that the method work as long as the ellipsoid is not
-too eccentric.  (To be safe, the ellipsoid should satisfy :math:`a/b \le
-2` and :math:`b/c \le 2`.  Also avoid ellipsoids which are nearly but
-not quite ellipsoids of revolution; triaxial models of the earth are
-fine, but expect problems if the difference in the equatorial semiaxes
-is 1 μm.)
+tricks, the method works as long as the ellipsoid is not too eccentric.
+(To be safe, the ellipsoid should satisfy :math:`a/b \le 2` and
+:math:`b/c \le 2`.  Also avoid ellipsoids which are nearly but not quite
+ellipsoids of revolution; triaxial models of the earth are fine, but
+expect problems if the difference in the equatorial semiaxes is 1 μm.)
+
+This method therefore provides a "working" solution of the inverse
+problem.  A "complete" solution will involve using Jacobi's solution.
+This will remove the sloppiness involved in using an ODE solver.  It
+will also be reasonably inexpensive to implement this using arbitrary
+precision arithmetic allowing an accurate test set to be assembled.
 
 .. _trigeodjac:
 
 Jacobi's solution
 ^^^^^^^^^^^^^^^^^
 
-I have coded up the solution to the direct problem in MATLAB using the
-[Chebfun]_ package.  This allows the indefinite integrals in Jacobi's
-solution to be evaluated accurately.  I do not include this
+I have coded up Jacobi's solution to the direct problem in MATLAB using
+the [Chebfun]_ package.  This allows the indefinite integrals in
+Jacobi's solution to be evaluated accurately.  I do not include this
 functionality in the ``triaxial`` class because
 
 * Chebfun is not compatible with Octave;
 * MATLAB's support for elliptic integrals and elliptic functions with
   modulus close to 1 is deficient --- this leads to inaccuracies for
-  geodesics which graze the umbilic points.
+  geodesics which graze the umbilical points.
 
 I will reimplement the solution in the C++ version of GeographicLib.
-This will make more consistent use of Fourier series (Chebfun switches
-to a Chebyshev series when asked to integrate a Fourier series) and use
-GeographicLib's implementation of elliptic integrals and elliptic
-functions.
+This will make more consistent use of Fourier series (in contrast,
+Chebfun switches to a Chebyshev series when asked to integrate a Fourier
+series) and use GeographicLib's implementation of elliptic integrals and
+elliptic functions.
 
 With this in place, the solution of the inverse problem should be
 straightforward.  Jacobi does not include an expression for the reduced
@@ -453,7 +467,7 @@ You can sample points (and directions) uniformly on the ellipsoid with
 ``cart2rand``, see [Marples+Williams23]_
 
 The function ``horizon`` returns points on the horizon of the ellipsoid
-when viewed from view poitn :math:`\mathbf V`.  These points satisfy
+when viewed from view point :math:`\mathbf V`.  These points satisfy
 
 .. math::
    \mathbf U \cdot \mathbf V &= 0\\
@@ -483,6 +497,14 @@ References
 
 .. [DLMF] Olver et al., `NIST Handbook of Mathematical Functions
    <https://dlmf.nist.gov>`__ (2010).
+
+.. [GeographicLib-triaxial] Karney, `Geodesics on a triaxial ellipsoid
+   <https://geographiclib.sourceforge.io/C++/doc/triaxial.html>`__
+   (2023).
+
+.. [Itoh+Kiyohara04] Itoh & Kiyohara, `The cut loci and the conjugate
+   loci on ellipsoids <https://doi.org/10.1007/s00229-004-0455-z>`__
+   (2004).
 
 .. [Jacobi39] Jacobi, `Note von der geodätischen Linie auf einem
    Ellipsoid und den verschiedenen Anwendungen einer merkwürdigen

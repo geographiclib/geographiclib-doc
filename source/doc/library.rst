@@ -64,7 +64,7 @@ JavaScript\ [#k]_ `JS doc`_       `JS repo`_         `JS packages`_\ [#l]_
         `conda-forge (Python) <https://anaconda.org/conda-forge/geographiclib>`_
 .. [#g] This is compatible with both Octave and MATLAB.  This package
         also includes several other components of the C++ library and a
-        treatment of great ellipses (not in C++ library).
+        treatment of great ellipses and triaxial ellipsoid (not in C++ library).
 .. [#h] Also available as a `MATLAB Central package
         <https://www.mathworks.com/matlabcentral/fileexchange/50605>`_.
 .. [#i] Also includes the gnomonic projections.
