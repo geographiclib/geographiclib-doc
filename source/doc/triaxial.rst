@@ -70,8 +70,8 @@ tangential the surface
    \lvert v \rvert &= 1, \\
    \mathbf v \cdot \mathbf U &= 0,
 
-where :math:`\mathbf U(\mathbf r) = \nabla\mathbf S(\mathbf r)` is the
-normal to the surface.
+where :math:`\mathbf U(\mathbf r) = \frac12 \nabla\mathbf S(\mathbf r)`
+is the normal to the surface.
 
 A point on the surface is specified by a latitude and longitude.  The
 *geodetic* latitude and longitude :math:`(\phi, \lambda)` are defined by
@@ -309,7 +309,7 @@ are needed to refine the solution.
 Note: tighter bounds can be placed on :math:`q` using
 
 .. math::
-   g(q) &\le \frac{y^2}e{q + l_b^2} + \frac{z^2}{q} - 1 \\
+   g(q) &\le \frac{y^2}{q + l_b^2} + \frac{z^2}{q} - 1 \\
    g(q) &\le \frac{x^2+y^2}{q + l_a^2} + \frac{z^2}{q} - 1 \\
    g(q) &\le \frac{x^2}{q + l_a^2} + \frac{y^2+z^2}{q + l_b^2} - 1 \\
    g(q) &\ge \frac{x^2+y^2}{q + l_b^2} + \frac{z^2}{q} - 1 \\
@@ -363,7 +363,7 @@ where
 .. math::
    \mathbf A &= \frac{\mathbf U}{U^2}
    \biggl( \frac{v_x^2}{a^2} + \frac{v_y^2}{b^2} + \frac{v_z^2}{c^2} \biggr),\\
-   K &= \frac1{a^2b^2c^2 U^2}.
+   K &= \frac1{a^2b^2c^2 U^4}.
 
 It is simplest to expression :math:`\mathbf r` and :math:`\mathbf v` is
 cartesian coordinates, since then there are no singularities in the
