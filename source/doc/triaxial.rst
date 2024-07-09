@@ -21,9 +21,9 @@ Jump to:
 Introduction
 ------------
 
-This page provided some implementation details for the ``triaxial``
-class in version 2.2 (released 2024-04-09) of the Octave/MATLAB package
-`GeographicLib
+This page provides some implementation details for the ``triaxial``
+class introduced in version 2.2 (released 2024-04-09) of the
+Octave/MATLAB package `GeographicLib
 <https://github.com/geographiclib/geographiclib-octave#readme>`_ (this
 link includes instructions on how to download and install the package).
 This involves a lot of new code so...  Expect there to be errors in the
@@ -42,15 +42,13 @@ various demonstrations of the geodesic capabilities.
 
 The package works equally well in Octave and in MATLAB.  However note
 that the solution of the geodesic problems is about 40 times faster in
-MATLAB.
+MATLAB.  Version 2.3 (released 2024-07-09) fixes some bugs in this
+class.
 
 .. _tricoords:
 
 Coordinate systems
 ------------------
-
-.. math::
-   \DeclareMathOperator*{\hypot}{hypot}
 
 A triaxial ellipsoid is the surface defined by
 
@@ -156,12 +154,13 @@ geodetic coordinates proceeds as follows
 
 .. math::
    \xi &= x/a^2, \quad \eta = y/b^2, \quad \zeta = z/c^2, \\
-   \phi &= \tan^{-1} \frac\zeta{\hypot(\xi, \eta)}, \\
+   \phi &= \tan^{-1} \frac\zeta{\lVert\xi, \eta\rVert}, \\
    \lambda &= \tan^{-1} \frac\eta\xi,
 
 where the quadrant of the angles should be determined by the signs of
 the numerators and denominators separately, using, for example, the
-library function atan2.
+library function atan2, and :math:`\lVert x, y, \ldots \rVert =
+\sqrt{x^2 + y^2 + \ldots}`
 
 .. _tricoordconvh:
 
@@ -204,9 +203,9 @@ To obtain a reasonably tight bound on the root, we use
 
 .. math::
    f(p) &\le \biggl(\frac{cz}{p}\biggr)^2 - 1, \\
-   f(p) &\le \biggl(\frac{\hypot(by, cz)}{p + l_b^2}\biggr)^2 - 1, \\
-   f(p) &\le \biggl(\frac{\hypot(ax, by, cz)}{p + l_a^2}\biggr)^2 - 1, \\
-   f(p) &\ge \biggl(\frac{\hypot(ax, by, cz)}{p}\biggr)^2 - 1.
+   f(p) &\le \biggl(\frac{\lVert by, cz\rVert}{p + l_b^2}\biggr)^2 - 1, \\
+   f(p) &\le \biggl(\frac{\lVert ax, by, cz\rVert}{p + l_a^2}\biggr)^2 - 1, \\
+   f(p) &\ge \biggl(\frac{\lVert ax, by, cz\rVert}{p}\biggr)^2 - 1.
 
 Because :math:`f'(p) < 0` for :math:`p > 0`, this leads to bounds on
 the positive root, :math:`p_{\mathrm{min}} \le p \le p_{\mathrm{max}}`,
@@ -214,14 +213,14 @@ where
 
 .. math::
 
-   p_{\mathrm{min}} &= \max(c \lvert z\rvert,
-   \hypot(by, cz) - l_b^2,
-   \hypot(ax, by, cz) - l_a^2), \\
-   p_{\mathrm{max}} &= \hypot(ax, by, cz).
+   p_{\mathrm{min}} &= \max(\lvert cz\rvert,
+   \lVert by, cz\rVert - l_b^2,
+   \lVert ax, by, cz\rVert - l_a^2), \\
+   p_{\mathrm{max}} &= \lVert ax, by, cz\rVert.
 
 [Panou+Korakitis22]_ substitute :math:`p_{\mathrm{min}} = c \lvert
 z\rvert`; they would get better performance using the tighter bound
-given here.  [Ligas12]_ uses :math:`p_0 = c\hypot(x, y, z)` for his
+given here.  [Ligas12]_ uses :math:`p_0 = c\lVert x, y, z\rVert` for his
 initial guess; because :math:`f(p_0)` can then be negative, Newton's
 method may fail to converge.
 
@@ -331,7 +330,7 @@ of geodesics to be found.  For an overview, see
 [GeographicLib-triaxial]_.
 
 Explicit evaluation of Jacobi's integrals was carried out by hand by
-[Cayley72]_ and, more recently, by [Baillard13]_.  Accurate evaluation of
+[Cayley72]_ and, more recently, by [Baillard15]_.  Accurate evaluation of
 the integrals involves changing the variable of integration using
 elliptic integrals and elliptic functions.  Unfortunately, Octave/MATLAB
 has poor support for these special functions, so for this implementation
@@ -396,7 +395,7 @@ Note well: Octave is about 40 slower than MATLAB at solving the ODEs.
 The inverse problem
 ^^^^^^^^^^^^^^^^^^^
 
-[Panou13]_ and [Baillard13]_ both attempt to solve the inverse problem,
+[Panou13]_ and [Baillard15]_ both attempt to solve the inverse problem,
 finding the shortest path between two points.  However, neither offers a
 complete solution.  A reliable method of solving the problem is obtained
 using the same basic method give by [Karney13]_ for solving the problem
@@ -415,22 +414,23 @@ reduced length :math:`m` is needed) to find the azimuth where the
 longitude matches that of the other point.
 
 About 6 iterations are required for random pairs of points on a
-terrestrial ellipsoid and the overall accuracy is probably about 1 μm.
-The method is somewhat fragile in that it expects geodesics to behave in
-the way dictated by Jacobi's solution; however, the ODE solver cannot
-guarantee that this is so.  However by setting reasonably tight error
-tolerances are set on the ODE solver and deploying some other defensive
-tricks, the method works as long as the ellipsoid is not too eccentric.
-(To be safe, the ellipsoid should satisfy :math:`a/b \le 2` and
-:math:`b/c \le 2`.  Also avoid ellipsoids which are nearly but not quite
-ellipsoids of revolution; triaxial models of the earth are fine, but
-expect problems if the difference in the equatorial semiaxes is 1 μm.)
+terrestrial ellipsoid.  Based on the [Geodesic-testset]_, the overall
+accuracy is probably about 10 μm.  The method is somewhat fragile in
+that it expects geodesics to behave in the way dictated by Jacobi's
+solution; however, the ODE solver cannot guarantee that this is so.
+However by setting reasonably tight error tolerances are set on the ODE
+solver and deploying some other defensive tricks, the method works as
+long as the ellipsoid is not too eccentric.  (To be safe, the ellipsoid
+should satisfy :math:`a/b \le 2` and :math:`b/c \le 2`.  Also avoid
+ellipsoids which are nearly but not quite ellipsoids of revolution;
+triaxial models of the earth are fine, but expect problems if the
+difference in the equatorial semiaxes is 1 μm.)
 
 This method therefore provides a "working" solution of the inverse
 problem.  A "complete" solution will involve using Jacobi's solution.
-This will remove the sloppiness involved in using an ODE solver.  It
-will also be reasonably inexpensive to implement this using arbitrary
-precision arithmetic allowing an accurate test set to be assembled.
+This will remove the sloppiness involved in using an ODE solver.  An
+initial implementation of Jacobi's solution was used to create the
+[Geodesic-testset]_.
 
 .. _trigeodjac:
 
@@ -456,7 +456,7 @@ elliptic functions.
 With this in place, the solution of the inverse problem should be
 straightforward.  Jacobi does not include an expression for the reduced
 length :math:`m`, so I will use some method other than Newton's for
-finding the azimuth.
+finding the azimuth, such as the method of [Chandrupatla97]_.
 
 .. _triutils:
 
@@ -467,7 +467,8 @@ You can sample points (and directions) uniformly on the ellipsoid with
 ``cart2rand``, see [Marples+Williams23]_
 
 The function ``horizon`` returns points on the horizon of the ellipsoid
-when viewed from view point :math:`\mathbf V`.  These points satisfy
+when viewed from a distant viewpoint in the direction
+:math:`\mathbf V`.  These points satisfy
 
 .. math::
    \mathbf U \cdot \mathbf V &= 0\\
@@ -486,11 +487,16 @@ components by :math:`(a, b, c)`.
 References
 ----------
 
-.. [Baillard13] Baillard. `Geodesics on a triaxial ellipsoid for the
-   HP-41 <https://hp41programs.yolasite.com/geod3axial.php>`__ (2013).
+.. [Baillard15] Baillard. `Geodesics on a triaxial ellipsoid for the
+   HP-41 <https://hp41programs.yolasite.com/geod3axial.php>`__ (2015).
 
 .. [Cayley72] Cayley, `On the geodesic lines on an ellipsoid
    <https://books.google.com/books?id=S4znAAAAMAAJ&pg=PA31>`__ (1872).
+
+.. [Chandrupatla97] Chandrupatla, `A new hybrid quadratic/bisection
+   algorithm for finding the zero of a nonlinear function without using
+   derivatives <https://doi.org/10.1016/s0965-9978(96)00051-8>`__
+   (1997).
 
 .. [Chebfun] Chebfun, `Numerical computing with functions
    <https://www.chebfun.org>`__ (2014).
@@ -498,9 +504,12 @@ References
 .. [DLMF] Olver et al., `NIST Handbook of Mathematical Functions
    <https://dlmf.nist.gov>`__ (2010).
 
+.. [Geodesic-testset] Karney, `Test set of geodesics on a trixial
+   ellipsoid <https://doi.org/10.5281/zenodo.12510796>`__ (2024).
+
 .. [GeographicLib-triaxial] Karney, `Geodesics on a triaxial ellipsoid
-   <https://geographiclib.sourceforge.io/C++/doc/triaxial.html>`__
-   (2023).
+   <https://geographiclib.sourceforge.io/1.29/triaxial.html>`__
+   (2013).
 
 .. [Itoh+Kiyohara04] Itoh & Kiyohara, `The cut loci and the conjugate
    loci on ellipsoids <https://doi.org/10.1007/s00229-004-0455-z>`__

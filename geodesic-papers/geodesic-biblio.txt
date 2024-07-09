@@ -1505,6 +1505,13 @@
    in ''Selected Works'', Vol 4 (Geodezizdat, Moscow, 1955),
    pp. 4--549.[[BR]]
    https://www.geokniga.org/bookfiles/geokniga-krasovskiy-fnizbrannye-sochineniyav-4-h-tomahtom-ivmgeodezizdat1955.pdf
+ * P. Sager,[[BR]]
+   ''Übersicht über die Entwickelung der Theorie der geodätischen
+   Linien seit Gauss [Overview of the development of the theory of
+   geodesic lines since Gauss]'',
+   Dissertation, Rostock Univ. (1903).[[BR]]
+   https://books.google.com/books?id=eKILAAAAYAAJ [[BR]]
+   Includes some 247 citations.
  * J. H. Poincaré,[[BR]]
    ''Sur les lignes géodésiques des surfaces convexes
    [Geodesics lines on convex surfaces]'',
@@ -1697,6 +1704,9 @@
    J. Surveying Eng. '''150'''(3), 04024005:1--9 (2024).[[BR]]
    https://doi.org/10.1061/JSUED2.SUENG-1483 [[BR]]
    https://arxiv.org/abs/2308.00495
+ * C. F. F. Karney,[[BR]]
+   ''Test set of geodesics on a triaxial ellipsoid'' (2024).[[BR]]
+   https://doi.org/10.5281/zenodo.12510796
  * C. M. Rollins,[[BR]]
    ''An integral for geodesic length'',
    Survey Review '''42'''(315), 20--26 (2010).[[BR]]
@@ -1782,7 +1792,7 @@
    https://hdl.handle.net/1811/77986
  * C. Marx,[[BR]]
    ''Performance of a solution of the direct geodetic
-   problem by Taylor series of Cartesian coordinates''.
+   problem by Taylor series of Cartesian coordinates'',
    J. Geodetic Science '''11'''(1), 122--130 (2021).[[BR]]
    https://doi.org/10.1515/jogs-2020-0127
  * E. Nowak and J. Nowak Da Costa,[[BR]]
