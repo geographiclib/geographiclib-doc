@@ -608,7 +608,7 @@
    https://doi.org/10.1515/crll.1830.5.297
  * F. Minding,[[BR]]
    ''Beiträge zur Theorie der kürzesten Linien auf krummen Flächen
-   [Contributions to the theory of shortest lines on curved suraces]'',
+   [Contributions to the theory of shortest lines on curved surfaces]'',
    Jour. Crelle '''20''', 323--327 (1840).[[BR]]
    https://www.digizeitschriften.de/id/243919689_0020|log29 [[BR]]
    https://doi.org/10.1515/crll.1840.20.323

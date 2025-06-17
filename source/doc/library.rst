@@ -200,3 +200,7 @@ algorithms or have built other tools using GeographicLib:
 
 * *JavaScript*: Jaco, `a graphical tool for geodesic calculations
   <http://geo.javawa.nl/coordcalc/index_en.html>`_.
+
+* *Swift*: Scott Hoyt, `Swift implementation of the geodesic routines in
+  GeographicLib
+  <https://github.com/scottrhoyt/geographiclib-swift>`_.
