@@ -18,6 +18,8 @@ started in 2008.  That `C++ library <C++/doc/index.html>`_ now offers:
 * gravity (e.g., EGM2008) and geomagnetic field (e.g., WMM2020)
   calculations.
 
+* computations on a triaxial ellipsoid.
+
 Portions of the library (particularly the geodesic routines) have also
 been implemented in a few :ref:`other languages <languages>`.  Prior to
 version 2.0, all the implementations were bundled together in the same

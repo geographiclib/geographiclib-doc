@@ -20,11 +20,11 @@
 root_doc = 'index'
 
 project = 'GeographicLib'
-copyright = '2009–2024, Charles Karney'
+copyright = '2009–2025, Charles Karney'
 author = 'Charles Karney'
 
 # The full version, including alpha/beta/rc tags
-release = '2.3'
+release = '2.4'
 
 # -- General configuration ---------------------------------------------------
 

@@ -42,8 +42,19 @@ various demonstrations of the geodesic capabilities.
 
 The package works equally well in Octave and in MATLAB.  However note
 that the solution of the geodesic problems is about 40 times faster in
-MATLAB.  Version 2.3 (released 2024-07-09) fixes some bugs in this
+MATLAB.  Version 2.4 (released 2025-08-21) fixes some bugs in this
 class.
+
+The C++ library [GeographicLib-2.6]_ now implements all of the
+functionality in the Octave/MATLAB package with the following
+exceptions:
+
+ * the aids for plotting curves on the ellipsoid are missing,
+ * the solution of the direct geodesic problem is implemented using
+   Jacobi's method,
+ * the inverse geodesic solution leverages Jacobi's direct solution,
+ * coordinate conversions allow the inclusion of direction and height
+   for all coordinate systems.
 
 .. _tricoords:
 
@@ -53,7 +64,7 @@ Coordinate systems
 A triaxial ellipsoid is the surface defined by
 
 .. math::
-  S(\mathbf r) = \frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} - 1 = 0,
+  S(\mathbf R) = \frac{X^2}{a^2} + \frac{Y^2}{b^2} + \frac{Z^2}{c^2} - 1 = 0,
 
 where :math:`a`, :math:`b`, and :math:`c` are the semiaxes of the
 ellipsoid.  We will take :math:`a \ge b \ge c > 0`.  Note that the
@@ -64,11 +75,11 @@ A direction on the surface can be specified by unit cartesian vector
 tangential the surface
 
 .. math
-   \mathbf v &= (v_x, v_y, v_z), \\
-   \lvert v \rvert &= 1, \\
-   \mathbf v \cdot \mathbf U &= 0,
+   \mathbf V &= (V_x, V_y, V_z), \\
+   \lvert V \rvert &= 1, \\
+   \mathbf V \cdot \mathbf U &= 0,
 
-where :math:`\mathbf U(\mathbf r) = \frac12 \nabla\mathbf S(\mathbf r)`
+where :math:`\mathbf U(\mathbf R) = \frac12 \nabla\mathbf S(\mathbf R)`
 is the normal to the surface.
 
 A point on the surface is specified by a latitude and longitude.  The
@@ -81,15 +92,15 @@ where the "hat" symbol denote a unit vector.  The *parametric* latitude
 and longitude :math:`(\phi', \lambda')` are defined by
 
 .. math::
- x &= a \cos\phi' \cos\lambda', \\
- y &= b \cos\phi' \sin\lambda', \\
- z &= c \sin\phi'.
+ X &= a \cos\phi' \cos\lambda', \\
+ Y &= b \cos\phi' \sin\lambda', \\
+ Z &= c \sin\phi'.
 
 The *geocentric* latitude
 and longitude :math:`(\phi'', \lambda'')` are defined by
 
 .. math::
- \hat{\mathbf r} = (
+ \hat{\mathbf R} = (
  \cos\phi'' \cos\lambda'' , \cos\phi'' \sin\lambda'' , \sin\phi'' ).
 
 As with ellipsoids of revolution, the geodetic, parametric, and
@@ -99,11 +110,11 @@ Finally *ellipsoid* latitude and longitude :math:`(\beta, \omega)` are
 defined by
 
 .. math::
-  x &= a \cos\omega
+  X &= a \cos\omega
       \frac{\sqrt{a^2 - b^2\sin^2\beta - c^2\cos^2\beta}}
            {\sqrt{a^2 - c^2}}, \\
-  y &= b \cos\beta \sin\omega, \\
-  z &= c \sin\beta
+  Y &= b \cos\beta \sin\omega, \\
+  Z &= c \sin\beta
       \frac{\sqrt{a^2\sin^2\omega + b^2\cos^2\omega - c^2}}
            {\sqrt{a^2 - c^2}}.
 
@@ -118,20 +129,20 @@ There are two useful representation of arbitrary points in
 three-dimensional space.  There first represents positions by
 
 .. math::
-   \mathbf r = \mathbf r_0 + h \hat{\mathbf U}(\mathbf r_0),
+   \mathbf R = \mathbf R_0 + h \hat{\mathbf U}(\mathbf R_0),
 
-where :math:`\mathbf r_0` is the closest point on the ellipsoid and
+where :math:`\mathbf R_0` is the closest point on the ellipsoid and
 :math:`h` is the height above the ellipsoid.  Since geodetic coordinates
 specify the direction of :math:`\mathbf U`, we can also represent this
 point be appending the height to the geodetic coordinates to give
 :math:`(\phi, \lambda, h)`.
 
 The second uses ellipsoidal coordinates.  For an arbitrary point
-:math:`\mathbf r`, we seek the value of :math:`u` such that
+:math:`\mathbf R`, we seek the value of :math:`u` such that
 
 .. math::
-   \frac{x^2}{u^2 + l_a^2} +
-   \frac{y^2}{u^2 + l_b^2} + \frac{z^2}{u^2} = 1,
+   \frac{X^2}{u^2 + l_a^2} +
+   \frac{Y^2}{u^2 + l_b^2} + \frac{Z^2}{u^2} = 1,
 
 where
 
@@ -153,7 +164,7 @@ algebraic exercises.  For example, the conversion from cartesian to
 geodetic coordinates proceeds as follows
 
 .. math::
-   \xi &= x/a^2, \quad \eta = y/b^2, \quad \zeta = z/c^2, \\
+   \xi &= X/a^2, \quad \eta = Y/b^2, \quad \zeta = Z/c^2, \\
    \phi &= \tan^{-1} \frac\zeta{\lVert\xi, \eta\rVert}, \\
    \lambda &= \tan^{-1} \frac\eta\xi,
 
@@ -170,18 +181,18 @@ Solving for :math:`h`
 Following [Ligas12]_, we have
 
 .. math::
-   \mathbf r_0 &= (x_0, y_0, z_0) = \biggl(
-   \frac{a^2x}{p + l_a^2},
-   \frac{b^2y}{p + l_b^2},
-   \frac{c^2z}{p} \biggr), \\
-   h &= \hat{\mathbf U}(\mathbf r_0) \cdot (\mathbf r - \mathbf r_0),
+   \mathbf R_0 &= (X_0, Y_0, Z_0) = \biggl(
+   \frac{a^2 X}{p + l_a^2},
+   \frac{b^2 Y}{p + l_b^2},
+   \frac{c^2 Z}{p} \biggr), \\
+   h &= \hat{\mathbf U}(\mathbf R_0) \cdot (\mathbf R - \mathbf R_0),
 
 where :math:`p` is the largest root of
 
 .. math::
-   f(p) = \biggl(\frac{ax}{p + l_a^2}\biggr)^2 +
-   \biggl(\frac{by}{p + l_b^2}\biggr)^2 +
-   \biggl(\frac{cz}{p}\biggr)^2 - 1 = 0.
+   f(p) = \biggl(\frac{a X}{p + l_a^2}\biggr)^2 +
+   \biggl(\frac{b Y}{p + l_b^2}\biggr)^2 +
+   \biggl(\frac{c Z}{p}\biggr)^2 - 1 = 0.
 
 [Ligas12]_ uses Newton's method to find this root; however, with his
 choice of starting guess, this sometimes fails to converge.
@@ -193,7 +204,7 @@ It turns out we can easily fix the problems with Newton's method.  First
 of all, we note that :math:`f(p)` has positive double poles at :math:`p
 = 0`, :math:`-l_b^2`, and :math:`-l_a^2` and that
 :math:`f(p) \rightarrow -1` for :math:`p \rightarrow \pm\infty`.  (For
-now, we assume that :math:`x, y, z` are all nonzero.).  Therefore
+now, we assume that :math:`X, Y, Z` are all nonzero.).  Therefore
 :math:`f(p)` has a single root for :math:`p \in (0, \infty)`.  In this
 region :math:`f'(p) < 0` and :math:`f''(p) > 0`, and, as a consequence,
 picking a starting guess for Newton's method between :math:`p = 0` and
@@ -202,10 +213,11 @@ the actual root is guaranteed to converge.
 To obtain a reasonably tight bound on the root, we use
 
 .. math::
-   f(p) &\le \biggl(\frac{cz}{p}\biggr)^2 - 1, \\
-   f(p) &\le \biggl(\frac{\lVert by, cz\rVert}{p + l_b^2}\biggr)^2 - 1, \\
-   f(p) &\le \biggl(\frac{\lVert ax, by, cz\rVert}{p + l_a^2}\biggr)^2 - 1, \\
-   f(p) &\ge \biggl(\frac{\lVert ax, by, cz\rVert}{p}\biggr)^2 - 1.
+   f(p) &\le \biggl(\frac{c Z}{p}\biggr)^2 - 1, \\
+   f(p) &\le \biggl(\frac{\lVert b Y, c Z\rVert}{p + l_b^2}\biggr)^2 - 1, \\
+   f(p) &\le \biggl(\frac{\lVert a X, b Y, c Z\rVert}
+                         {p + l_a^2}\biggr)^2 - 1, \\
+   f(p) &\ge \biggl(\frac{\lVert a X, b Y, c Z\rVert}{p}\biggr)^2 - 1.
 
 Because :math:`f'(p) < 0` for :math:`p > 0`, this leads to bounds on
 the positive root, :math:`p_{\mathrm{min}} \le p \le p_{\mathrm{max}}`,
@@ -213,14 +225,14 @@ where
 
 .. math::
 
-   p_{\mathrm{min}} &= \max(\lvert cz\rvert,
-   \lVert by, cz\rVert - l_b^2,
-   \lVert ax, by, cz\rVert - l_a^2), \\
-   p_{\mathrm{max}} &= \lVert ax, by, cz\rVert.
+   p_{\mathrm{min}} &= \max(\lvert c Z\rvert,
+   \lVert b Y, c Z\rVert - l_b^2,
+   \lVert a X, b Y, c Z\rVert - l_a^2), \\
+   p_{\mathrm{max}} &= \lVert a X, b Y, c Z\rVert.
 
 [Panou+Korakitis22]_ substitute :math:`p_{\mathrm{min}} = c \lvert
-z\rvert`; they would get better performance using the tighter bound
-given here.  [Ligas12]_ uses :math:`p_0 = c\lVert x, y, z\rVert` for his
+Z\rvert`; they would get better performance using the tighter bound
+given here.  [Ligas12]_ uses :math:`p_0 = c\lVert X, Y, Z\rVert` for his
 initial guess; because :math:`f(p_0)` can then be negative, Newton's
 method may fail to converge.
 
@@ -231,16 +243,16 @@ might also vanish).
 Provided that :math:`f(p_{\mathrm{min}}) > 0`, we can now start Newton's
 method with :math:`p_0 = p_{\mathrm{min}}` and this converges to the
 root from below.  If :math:`f(p_{\mathrm{min}}) \le 0` (which can only
-happen if :math:`z = 0`), the required solution is :math:`p = 0`.  In
-this case, the expression for :math:`\mathbf r_0` is indeterminate, and
+happen if :math:`Z = 0`), the required solution is :math:`p = 0`.  In
+this case, the expression for :math:`\mathbf R_0` is indeterminate, and
 we proceed as follows:
 
-* If :math:`x_0` is indeterminate, substitute :math:`x_0 = 0` (this
-  can only happen with :math:`x = 0` on a sphere).
-* If :math:`y_0` is indeterminate, substitute :math:`y_0 = 0` (this
-  can only happen with :math:`y = 0` on an oblate spheroid).
-* If :math:`z_0` is indeterminate, substitute :math:`z_0 = c \sqrt{1 -
-  x^2/a^2 - y^2/b^2}`.
+* If :math:`X_0` is indeterminate, substitute :math:`X_0 = 0` (this
+  can only happen with :math:`X = 0` on a sphere).
+* If :math:`Y_0` is indeterminate, substitute :math:`Y_0 = 0` (this
+  can only happen with :math:`Y = 0` on an oblate spheroid).
+* If :math:`Z_0` is indeterminate, substitute :math:`Z_0 = c \sqrt{1 -
+  X^2/a^2 - Y^2/b^2}`.
 
 A few other points to note:
 
@@ -254,8 +266,8 @@ A few other points to note:
 * We accumulate the terms in :math:`f(p)` in a two-word accumulator to
   improved the accuracy near its root.
 * To avoid potentially singular behavior, we initially "flush" tiny
-  values of the components of :math:`\mathbf r` to zero.
-* In the case where :math:`z_0` is indeterminate, the sign of :math:`z`
+  values of the components of :math:`\mathbf R` to zero.
+* In the case where :math:`Z_0` is indeterminate, the sign of :math:`Z`
   should be used to determine the sign of the square root above.
 * If need be, this method is easily generalized to ellipsoids in
   higher dimensions.
@@ -268,7 +280,7 @@ Solving for :math:`u`
 Writing :math:`u^2 = q`, we need to find the roots of
 
 .. math::
-   g(q) = \frac{x^2}{q + l_a^2} + \frac{y^2}{q + l_b^2} + \frac{z^2}{q} - 1
+   g(q) = \frac{X^2}{q + l_a^2} + \frac{Y^2}{q + l_b^2} + \frac{Z^2}{q} - 1
    = 0.
 
 The structure of :math:`g(q)` is very similar to :math:`f(p)`.  Since
@@ -279,22 +291,22 @@ just one of them is positive.  As before, bounds can be put on this root
 where
 
 .. math::
-   q_{\mathrm{min}} &= \max(z^2,
-   y^2 + z^2 - l_b^2,
-   x^2 + y^2 + z^2 - l_a^2), \\
-   q_{\mathrm{max}} &= x^2 + y^2 + z^2.
+   q_{\mathrm{min}} &= \max(Z^2,
+   Y^2 + Z^2 - l_b^2,
+   X^2 + Y^2 + Z^2 - l_a^2), \\
+   q_{\mathrm{max}} &= X^2 + Y^2 + Z^2.
 
-As before, in implementing Newton's method, we neglect any term in the
+In implementing Newton's method, we neglect any term in the
 definition of :math:`g(q)` if its numerator vanishes (even though the
 denominator might also vanish).
 
 Provided that :math:`g(q_{\mathrm{min}}) > 0`, we can now start Newton's
 method with :math:`q_0 = q_{\mathrm{min}}` and this converges to the
 root from below.  If :math:`g(q_{\mathrm{min}}) \le 0` (which can only
-happen if :math:`z = 0`), the required solution is :math:`q = u = 0`.
+happen if :math:`Z = 0`), the required solution is :math:`q = u = 0`.
 
 Of course, we can expand out :math:`g(q)` to obtain a cubic polynomial
-in :math:`q` which cab be solved analytically, see [DLMF]_,
+in :math:`q` which can be solved analytically, see [DLMF]_,
 Secs. 1.11(iii) and 4.43.  This method is advocated by
 [Panou+Korakitis21]_.  However, this solution suffers from roundoff
 error when the coefficient of :math:`q` is positive; in this case, the
@@ -308,11 +320,11 @@ are needed to refine the solution.
 Note: tighter bounds can be placed on :math:`q` using
 
 .. math::
-   g(q) &\le \frac{y^2}{q + l_b^2} + \frac{z^2}{q} - 1 \\
-   g(q) &\le \frac{x^2+y^2}{q + l_a^2} + \frac{z^2}{q} - 1 \\
-   g(q) &\le \frac{x^2}{q + l_a^2} + \frac{y^2+z^2}{q + l_b^2} - 1 \\
-   g(q) &\ge \frac{x^2+y^2}{q + l_b^2} + \frac{z^2}{q} - 1 \\
-   g(q) &\ge \frac{x^2}{q + l_a^2} + \frac{y^2+z^2}{q} - 1
+   g(q) &\le \frac{Y^2}{q + l_b^2} + \frac{Z^2}{q} - 1 \\
+   g(q) &\le \frac{X^2+Y^2}{q + l_a^2} + \frac{Z^2}{q} - 1 \\
+   g(q) &\le \frac{X^2}{q + l_a^2} + \frac{Y^2+Z^2}{q + l_b^2} - 1 \\
+   g(q) &\ge \frac{X^2+Y^2}{q + l_b^2} + \frac{Z^2}{q} - 1 \\
+   g(q) &\ge \frac{X^2}{q + l_a^2} + \frac{Y^2+Z^2}{q} - 1
 
 and solving the resulting quadratic equations.  This yields only a
 marginal improvement given that we're starting with the root of the
@@ -330,41 +342,46 @@ of geodesics to be found.  For an overview, see
 [GeographicLib-triaxial]_.
 
 Explicit evaluation of Jacobi's integrals was carried out by hand by
-[Cayley72]_ and, more recently, by [Baillard15]_.  Accurate evaluation of
-the integrals involves changing the variable of integration using
-elliptic integrals and elliptic functions.  Unfortunately, Octave/MATLAB
-has poor support for these special functions, so for this implementation
-of the geodesic routines, I instead integrate the geodesic equations in
-cartesian coordinates, following [Panou+Korakitis19]_.
+[Cayley72]_ and, more recently, by [Baillard15]_.  Accurate evaluation
+of the integrals involves changing the variable of integration using
+elliptic integrals and elliptic functions.  This is now provided with
+[GeographicLib-2.6]_
+
+Unfortunately, Octave/MATLAB has poor support for these special
+functions, so for this implementation of the geodesic routines, I
+instead integrate the geodesic equations in cartesian coordinates,
+following [Panou+Korakitis19]_.
 
 .. _trigeoddirect:
 
 The direct problem
 ^^^^^^^^^^^^^^^^^^
 
+This describes the method used the Octave/MATLAB package.
+
 The equation for geodesics on a surface is the same as for the motion of
 a particle constrained to move on the surface but subject to no other
 forces.  The centrifugal acceleration of the particle is
-:math:`-(v^2/R)\hat{\mathbf U}` where :math:`R` is the radius of
-curvature in the direction of :math:`\mathbf v`.  We will take the speed
+:math:`-(V^2/R_c)\hat{\mathbf U}` where :math:`R_c` is the radius of
+curvature in the direction of :math:`\mathbf V`.  We will take the speed
 to be unity (and, of course, the speed is a constant in this problem);
 thus time can be replaced by :math:`s`, the displacement along the
 geodesic, as the independent variable.  The differential equation for
 the geodesic is
 
 .. math::
-   d\mathbf r / ds &= \mathbf v, \\
-   d\mathbf v / ds &= \mathbf A, \\
+   d\mathbf R / ds &= \mathbf V, \\
+   d\mathbf V / ds &= \mathbf A, \\
    d^2 m / ds^2 &= -K m,
 
 where
 
 .. math::
-   \mathbf A &= \frac{\mathbf U}{U^2}
-   \biggl( \frac{v_x^2}{a^2} + \frac{v_y^2}{b^2} + \frac{v_z^2}{c^2} \biggr),\\
+   \mathbf A &= -\frac{\mathbf U}{U^2}
+   \biggl( \frac{V_x^2}{a^2} + \frac{V_y^2}{b^2} + \frac{V_z^2}{c^2} \biggr),\\
    K &= \frac1{a^2b^2c^2 U^4}.
 
-It is simplest to expression :math:`\mathbf r` and :math:`\mathbf v` is
+It is simplest to express :math:`\mathbf R` and :math:`\mathbf V` is
 cartesian coordinates, since then there are no singularities in the
 representation.
 
@@ -394,6 +411,8 @@ Note well: Octave is about 40 slower than MATLAB at solving the ODEs.
 
 The inverse problem
 ^^^^^^^^^^^^^^^^^^^
+
+This describes the method used the Octave/MATLAB package.
 
 [Panou13]_ and [Baillard15]_ both attempt to solve the inverse problem,
 finding the shortest path between two points.  However, neither offers a
@@ -427,10 +446,10 @@ triaxial models of the earth are fine, but expect problems if the
 difference in the equatorial semiaxes is 1 μm.)
 
 This method therefore provides a "working" solution of the inverse
-problem.  A "complete" solution will involve using Jacobi's solution.
-This will remove the sloppiness involved in using an ODE solver.  An
-initial implementation of Jacobi's solution was used to create the
-[Geodesic-testset]_.
+problem.  The "complete" solution involves using Jacobi's method and is
+provided in the C++ library GeographicLib.  This removes the sloppiness
+involved in using an ODE solver.  An initial implementation of Jacobi's
+solution was used to create the [Geodesic-testset]_.
 
 .. _trigeodjac:
 
@@ -447,16 +466,16 @@ functionality in the ``triaxial`` class because
   modulus close to 1 is deficient --- this leads to inaccuracies for
   geodesics which graze the umbilical points.
 
-I will reimplement the solution in the C++ version of GeographicLib.
-This will make more consistent use of Fourier series (in contrast,
-Chebfun switches to a Chebyshev series when asked to integrate a Fourier
-series) and use GeographicLib's implementation of elliptic integrals and
-elliptic functions.
+I have implemented the solution in the C++ library GeographicLib.  This
+makes consistent use of Fourier series (in contrast, Chebfun switches to
+a Chebyshev series when asked to integrate a Fourier series) and use
+GeographicLib's implementation of elliptic integrals and elliptic
+functions.
 
-With this in place, the solution of the inverse problem should be
+With this in place, the solution of the inverse problem was
 straightforward.  Jacobi does not include an expression for the reduced
-length :math:`m`, so I will use some method other than Newton's for
-finding the azimuth, such as the method of [Chandrupatla97]_.
+length :math:`m`, so, instead of Newton's method, I used some the simple
+root finding method of [Chandrupatla97]_ to determine the azimuth.
 
 .. _triutils:
 
@@ -468,13 +487,13 @@ You can sample points (and directions) uniformly on the ellipsoid with
 
 The function ``horizon`` returns points on the horizon of the ellipsoid
 when viewed from a distant viewpoint in the direction
-:math:`\mathbf V`.  These points satisfy
+:math:`\mathbf H`.  These points satisfy
 
 .. math::
-   \mathbf U \cdot \mathbf V &= 0\\
-   \biggl(\frac x{a^2}, \frac y{b^2}, \frac z{c^2}\biggl) \cdot \mathbf V&= 0\\
-   \biggl(\frac xa, \frac yb, \frac zc\biggl) \cdot
-   \biggl(\frac{V_x}a, \frac{V_y}b, \frac{V_z}c\biggl) &= 0
+   \mathbf U \cdot \mathbf H &= 0\\
+   \biggl(\frac X{a^2}, \frac Y{b^2}, \frac Z{c^2}\biggl) \cdot \mathbf H&= 0\\
+   \biggl(\frac X a, \frac Y b, \frac Z c\biggl) \cdot
+   \biggl(\frac{H_x}a, \frac{H_y}b, \frac{H_z}c\biggl) &= 0
 
 The first vector in the last equation gives points on a unit sphere, and
 these are on the horizon of the sphere when viewed from the direction
@@ -510,6 +529,10 @@ References
 .. [GeographicLib-triaxial] Karney, `Geodesics on a triaxial ellipsoid
    <https://geographiclib.sourceforge.io/1.29/triaxial.html>`__
    (2013).
+
+.. [GeographicLib-2.6] Karney, `GeographicLib, Version 2.6
+   <https://geographiclib.sourceforge.io/C++/2.6/index.html>`__
+   (2025).
 
 .. [Itoh+Kiyohara04] Itoh & Kiyohara, `The cut loci and the conjugate
    loci on ellipsoids <https://doi.org/10.1007/s00229-004-0455-z>`__
