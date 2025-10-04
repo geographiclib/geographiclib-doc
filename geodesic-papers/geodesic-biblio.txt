@@ -544,13 +544,13 @@
    formati [Demonstration and extension of a new theorem by Gauss on the
    integral over triangles formed by geodesics on a given surface]'',
    Jour. Crelle '''16''', 344--350 (1837).[[BR]]
-   https://www.digizeitschriften.de/id/243919689_0016|log32 [[BR]]
+   https://books.google.com/books?id=2qrxAAAAMAAJ&pg=PA344 [[BR]]
    https://doi.org/10.1515/crll.1837.16.344
  * C. G. J. Jacobi,[[BR]]
    ''Zur Theorie der Variations Rechnung und der Differential Gleichungen
    [The theory of the calculus of variations and of differential equations]'',
    Jour. Crelle '''17''', 68--82 (1837).[[BR]]
-   https://www.digizeitschriften.de/id/243919689_0017|log7 [[BR]]
+   https://books.google.com/books?id=FKvxAAAAMAAJ&pg=PA68 [[BR]]
    https://doi.org/10.1515/crll.1837.17.68
  * C. G. J. Jacobi,[[BR]]
    ''Note von der geodätischen Linie auf einem Ellipsoid und den
@@ -558,7 +558,7 @@
    [The geodesic on an ellipsoid and various applications of a remarkable
    analytical substitution]'',
    Jour. Crelle '''19''', 309--313 (1839).[[BR]]
-   https://www.digizeitschriften.de/id/243919689_0019|log20 [[BR]]
+   https://books.google.com/books?id=RbwGAAAAYAAJ&pg=PA309 [[BR]]
    https://doi.org/10.1515/crll.1839.19.309 [[BR]]
    French translation: Jour. Liouville '''6''', 267--272 (1841).[[BR]]
    http://sites.mathdoc.fr/JMPA/PDF/JMPA_1841_1_6_A20_0.pdf
@@ -581,7 +581,7 @@
    https://doi.org/10.1002/asna.18550411401 [[BR]]
    https://doi.org/10.1002/asna.18550422201 [[BR]]
    also in Jour. Crelle '''53''', 335--365 (1857).[[BR]]
-   https://www.digizeitschriften.de/id/243919689_0053|log30 [[BR]]
+   https://books.google.com/books?id=vc0GAAAAYAAJ&pg=PA335 [[BR]]
    https://doi.org/10.1515/crll.1857.53.335
  * C. G. J. Jacobi,[[BR]]
    ''Vorlesungen über Dynamik [Lectures on Dynamics]'',
@@ -604,27 +604,27 @@
    ''Über die Curven des kürzesten Perimeters auf krummen Flächen
    [Curves of minimum perimeter on curved surfaces]'',
    Jour. Crelle '''5''', 297--304 (1830).[[BR]]
-   https://www.digizeitschriften.de/id/243919689_0005|log27 [[BR]]
+   https://books.google.com/books?id=Y6wGAAAAYAAJ&pg=PA297 [[BR]]
    https://doi.org/10.1515/crll.1830.5.297
  * F. Minding,[[BR]]
    ''Beiträge zur Theorie der kürzesten Linien auf krummen Flächen
    [Contributions to the theory of shortest lines on curved surfaces]'',
    Jour. Crelle '''20''', 323--327 (1840).[[BR]]
-   https://www.digizeitschriften.de/id/243919689_0020|log29 [[BR]]
+   https://books.google.com/books?id=bLwGAAAAYAAJ&pg=PA323 [[BR]]
    https://doi.org/10.1515/crll.1840.20.323
  * F. Minding,[[BR]]
    ''Zur Theorie der Curven kürzesten Umrings, bei gegebenem
    Flächeninhalt auf krummen Flächen
    [The shortest curves encirling a given area on a curved surface]'',
    Jour. Crelle '''86''', 279--289 (1879).[[BR]]
-   https://www.digizeitschriften.de/id/243919689_0086|log18 [[BR]]
-   https://doi.org/10.1515/crll.1879.86.279
+   https://books.google.com/books?id=85HxAAAAMAAJ&pg=PA279 (PDF crelle-V86.pdf)
+   [[BR]] https://doi.org/10.1515/crll.1879.86.279
  * F. J. Joachimsthal,[[BR]]
    ''Observationes de lineis brevissimis et curvis curvaturae in
    superficiebus secundi gradus [Observations on the shortest lines on
    curved surfaces of the second degree]'',
    Jour. Crelle '''26''', 155--171 (1843).[[BR]]
-   https://www.digizeitschriften.de/id/243919689_0026|log15 [[BR]]
+   https://books.google.com/books?id=8ptGAAAAcAAJ&pg=PA155 [[BR]]
    https://doi.org/10.1515/crll.1843.26.155
  * F. J. Joachimsthal,[[BR]]
    ''Anwendung der Differential- und Integralrechnung auf die
@@ -774,7 +774,7 @@
  * C. Graves,[[BR]]
    ''Elementary geometrical proof of Joachimsthal's theorem'',
    Jour. Crelle '''42''', 279 (1851).[[BR]]
-   https://www.digizeitschriften.de/id/243919689_0042|log31 [[BR]]
+   https://books.google.com/books?id=gKBGAAAAcAAJ&pg=PA279 [[BR]]
    https://doi.org/10.1515/crll.1851.42.279
  * G. Piobert,[[BR]]
    ''De la forma mejor que conviene dar á los triángulos geodésicos
@@ -817,7 +817,7 @@
    [Foundations of exact spheroidal trigonometry, in particular,
    concerning geodesic lines on a spheroidal surface]'',
    Jour. Crelle '''43''', 294--339 (1852).[[BR]]
-   https://www.digizeitschriften.de/id/243919689_0043|log23 [[BR]]
+   https://books.google.com/books?id=ygVCAAAAcAAJ&pg=PA294 [[BR]]
    https://doi.org/10.1515/crll.1852.43.294
  * A. Terrero,[[BR]]
    ''Memoria sobre la forma mas conveniente de los triángulos geodésicos
@@ -927,7 +927,7 @@
    [Surfaces for which one of the two principal radii of curvature is a
    function of the other]'',
    Jour. Crelle '''62''', 160--173 (1863).[[BR]]
-   https://www.digizeitschriften.de/id/243919689_0062|log13 [[BR]]
+   https://books.google.com/books?id=ggRCAAAAcAAJ&pg=PA160 [[BR]]
    https://doi.org/10.1515/crll.1863.62.160
  * J. Weingarten,[[BR]]
    ''Über die Reduction der Winkel eines sphäroidischen Dreiecks auf die
@@ -1243,8 +1243,8 @@
    curved surfaces, which have the property that the geodesic lines
    emanating from them never cease to be shortest lines]'',
    Jour. Crelle '''91''', 23--53 (1881).[[BR]]
-   https://www.digizeitschriften.de/id/243919689_0091|log5 [[BR]]
-   https://doi.org/10.1515/crll.1881.91.23
+   https://books.google.com/books?id=vQYPAAAAIAAJ&pg=PA23 (PDF crelle-V91.pdf)
+   [[BR]] https://doi.org/10.1515/crll.1881.91.23
  * W. Jordan,[[BR]]
    ''Über die Bestimmung des mittleren Winkelmessungsfehlers einer nach
    der Bessel'schen Methode ausgeglichenen Triangulirung [The average error
