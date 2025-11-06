@@ -24,7 +24,7 @@ copyright = '2009–2025, Charles Karney'
 author = 'Charles Karney'
 
 # The full version, including alpha/beta/rc tags
-release = '2.4'
+release = '2.5'
 
 # -- General configuration ---------------------------------------------------
 

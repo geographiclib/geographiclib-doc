@@ -1677,6 +1677,10 @@
    ''Geodetic line at constant altitude above the ellipsoid''
    (May 2008).[[BR]]
    https://arxiv.org/abs/0711.0642
+ * R. J. Mathar,[[BR]]
+   ''Two Integrals of Geodetic Lines in Oblate Ellipsoidal Coordinates''
+   (May 2010).[[BR]]
+   https://arxiv.org/abs/1005.3790
  * C. F. F. Karney,[[BR]]
    ''GeographicLib, version 2009-03'' (Mar. 2009).[[BR]]
    https://doi.org/10.5281/zenodo.32463

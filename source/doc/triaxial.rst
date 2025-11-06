@@ -56,10 +56,15 @@ exceptions:
  * coordinate conversions allow the inclusion of direction and height
    for all coordinate systems.
 
+This is documented in [Karney25]_.
+
 .. _tricoords:
 
 Coordinate systems
 ------------------
+
+The material here is covered in more detail in Section 2 and Appendices
+A and B of [Karney25]_.
 
 A triaxial ellipsoid is the surface defined by
 
@@ -345,7 +350,7 @@ Explicit evaluation of Jacobi's integrals was carried out by hand by
 [Cayley72]_ and, more recently, by [Baillard15]_.  Accurate evaluation
 of the integrals involves changing the variable of integration using
 elliptic integrals and elliptic functions.  This is now provided with
-[GeographicLib-2.6]_
+[GeographicLib-2.6]_ and documented in [Karney25]_.
 
 Unfortunately, Octave/MATLAB has poor support for these special
 functions, so for this implementation of the geodesic routines, I
@@ -356,6 +361,9 @@ following [Panou+Korakitis19]_.
 
 The direct problem
 ^^^^^^^^^^^^^^^^^^
+
+The material here is covered in more detail in Appendix E of
+[Karney25]_.
 
 This describes the method used the Octave/MATLAB package.
 
@@ -446,10 +454,11 @@ triaxial models of the earth are fine, but expect problems if the
 difference in the equatorial semiaxes is 1 μm.)
 
 This method therefore provides a "working" solution of the inverse
-problem.  The "complete" solution involves using Jacobi's method and is
-provided in the C++ library GeographicLib.  This removes the sloppiness
-involved in using an ODE solver.  An initial implementation of Jacobi's
-solution was used to create the [Geodesic-testset]_.
+problem.  The "complete" solution involves using Jacobi's method.  This
+is provided in the C++ library GeographicLib and documented in
+[Karney25]_.  This removes the sloppiness involved in using an ODE
+solver.  An initial implementation of Jacobi's solution was used to
+create the [Geodesic-testset]_.
 
 .. _trigeodjac:
 
@@ -544,11 +553,14 @@ References
    <https://doi.org/10.1515/crll.1839.19.309>`__ (1839).
 
 .. [Karney13] Karney, `Algorithms for geodesics
-   <http://dx.doi.org/10.1007/s00190-012-0578-z>`__ (2013).
+   <https://dx.doi.org/10.1007/s00190-012-0578-z>`__ (2013).
+
+.. [Karney25] Karney, `Jacobi's solution for geodesics on a triaxial ellipsoid
+   <https://arxiv.org/abs/2511.01621>`__ (2025).
 
 .. [Ligas12] Ligas, `Two modified algorithms to transform Cartesian to
    geodetic coordinates on a triaxial ellipsoid
-   <http://dx.doi.org/10.1007/s11200-011-9017-5>`__ (2012).
+   <https://dx.doi.org/10.1007/s11200-011-9017-5>`__ (2012).
 
 .. [Marples+Williams23] Marples & Williams, `Patch area and uniform
    sampling on the surface of any ellipsoid
@@ -560,12 +572,12 @@ References
 
 .. [Panou+Korakitis19] Panou & Korakitis, `Geodesic equations and their
    numerical solution in Cartesian coordinates on a triaxial ellipsoid
-   <http://dx.doi.org/10.1515/jogs-2019-0001>`__ (2019).
+   <https://dx.doi.org/10.1515/jogs-2019-0001>`__ (2019).
 
 .. [Panou+Korakitis21] Panou & Korakitis, `Analytical and numerical
    methods of converting Cartesian to ellipsoidal coordinates
-   <http://dx.doi.org/10.1515/jogs-2020-0126>`__ (2021).
+   <https://dx.doi.org/10.1515/jogs-2020-0126>`__ (2021).
 
 .. [Panou+Korakitis22] Panou & Korakitis, `Cartesian to geodetic
    coordinates conversion on a triaxial ellipsoid using the bisection
-   method <http://dx.doi.org/10.1007/s00190-022-01650-9>`__ (2022).
+   method <https://dx.doi.org/10.1007/s00190-022-01650-9>`__ (2022).
